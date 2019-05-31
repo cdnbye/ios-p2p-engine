@@ -85,6 +85,7 @@
 		8DC78F40DC1217BDA1C683769AEFEEDB /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 7584ACBD3527CC4F1EBFCE8FC625BA69 /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9223A6D170EF7A369711E8C72EC1A672 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ABA7033A21D600428AE3B42E9A5B34 /* DDDispatchQueueLogFormatter.m */; };
 		923F039177B198DE28EDB8FC79C318B6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389DC76FE0932D443CA92C82885ACA3F /* QuartzCore.framework */; };
+		94886C7222A11A570064132A /* Readme_zh.md in Resources */ = {isa = PBXBuildFile; fileRef = 94886C7122A11A570064132A /* Readme_zh.md */; };
 		94BE356FC38EAE4DA93EFC3E8FFFAFDC /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 372B3DAB047E24E3876BD121E6BE0C9E /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		978394310D201AB0C6C4012DA0D1286F /* GCDWebServerFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E46443F0B073121B6A0BFE5A33AC64 /* GCDWebServerFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B51872748FFE6B42A5101C4885BDD51 /* YYMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FABA3A7A92939B3E2EC2F6B1E9FDCD6 /* YYMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -300,6 +301,7 @@
 		9152CC90360195899EE34E70F57DFF8D /* GCDWebServer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GCDWebServer-dummy.m"; sourceTree = "<group>"; };
 		926A254962DE4DE238A989CE566D4B69 /* GCDWebServerRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerRequest.m; path = GCDWebServer/Core/GCDWebServerRequest.m; sourceTree = "<group>"; };
 		944FBA574D503BDF771BF0F0EF236A18 /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerHTTPStatusCodes.h; path = GCDWebServer/Core/GCDWebServerHTTPStatusCodes.h; sourceTree = "<group>"; };
+		94886C7122A11A570064132A /* Readme_zh.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme_zh.md; sourceTree = "<group>"; };
 		961FCFB3A665607DF7B0F57C01C758AD /* Pods-CDNByeSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDNByeSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9995A9B3EA474182B034A7D94ADCB412 /* GoogleWebRTC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleWebRTC.xcconfig; sourceTree = "<group>"; };
 		9A90673497B22D0F266F07802232375C /* GCDWebServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDWebServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -554,6 +556,7 @@
 		4F7431DFB6B5397EAB5CEE32FAC738C1 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				94886C7122A11A570064132A /* Readme_zh.md */,
 				4340E2085CCF1DAD4CA7A4BF68380960 /* CDNByeSDK.podspec */,
 				BC9916FECFB70FB982A8F2D0C5316B9A /* LICENSE */,
 				2716AD2DF2631CE27664802D89B55322 /* README.md */,
@@ -1110,6 +1113,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94886C7222A11A570064132A /* Readme_zh.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

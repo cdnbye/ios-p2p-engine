@@ -1,29 +1,62 @@
-# CDNByeSDK
+**English | [简体中文](Readme_zh.md)**
 
-[![CI Status](https://img.shields.io/travis/snowinszu/CDNByeSDK.svg?style=flat)](https://travis-ci.org/snowinszu/CDNByeSDK)
-[![Version](https://img.shields.io/cocoapods/v/CDNByeSDK.svg?style=flat)](https://cocoapods.org/pods/CDNByeSDK)
-[![License](https://img.shields.io/cocoapods/l/CDNByeSDK.svg?style=flat)](https://cocoapods.org/pods/CDNByeSDK)
-[![Platform](https://img.shields.io/cocoapods/p/CDNByeSDK.svg?style=flat)](https://cocoapods.org/pods/CDNByeSDK)
+<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="figs/cdnbye.png" alt="cdnbye logo"></a></h1>
+<h4 align="center">Save Your Bandwidth using WebRTC.</h4>
+<h4 align="center">Save Your Bandwidth using WebRTC.</h4>
+<p align="center">
+<a href="https://cocoapods.org/pods/CDNByeSDK"><img src="https://img.shields.io/cocoapods/v/CDNByeSDK.svg?style=flat" alt="version"></a>
+<a href="https://cocoapods.org/pods/CDNByeSDK"><img src="https://img.shields.io/cocoapods/p/CDNByeSDK.svg?style=flat" alt="platform"></a>
+</p>
 
-## Example
+CDNBye iOS P2P Engine implements [WebRTC](https://en.wikipedia.org/wiki/WebRTC) datachannel to scale live/vod video streaming by peer-to-peer network using bittorrent-like protocol.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Features
+- Interconnect with CDNBye [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine)
+- Support live and VOD streams over HLS protocol(m3u8)
+- Very easy to  integrate with an existing ios project
+- Support any iOS player
+- Efficient scheduling policies to enhance the performance of P2P streaming
+- Highly configurable
+- Use IP database to group up peers by ISP and regions
+- API frozen, new releases will not break your code
 
-## Requirements
+## Installation with CocoaPods
 
-## Installation
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install it with the following command:
 
-CDNByeSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'CDNByeSDK'
+```bash
+$ gem install cocoapods
 ```
 
-## Author
+#### Podfile
 
-snowinszu, 86755838@qq.com
+To integrate CDNByeKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-## License
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
 
-CDNByeSDK is available under the MIT license. See the LICENSE file for more info.
+target 'TargetName' do
+pod 'CDNByeSDK'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+## API and Configuration
+
+## Console
+
+## Issue & Feature Request
+- If you found a bug, open an issue.
+- If you have a feature request, open an issue.
+
+## FAQ
+We have collected some [frequently asked questions](https://docs.cdnbye.com/#/en/FAQ). Before reporting an issue, please search if the FAQ has the answer to your problem.
+
+## Contact Us
+Email：service@cdnbye.com
