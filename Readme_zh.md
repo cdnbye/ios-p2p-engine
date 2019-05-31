@@ -19,7 +19,6 @@ P2P技术使观看相同内容的用户之间可以相互分享数据，不仅�
 - 高可配置化，用户可以根据特定的使用环境调整各个参数
 - 通过有效的调度策略来保证用户的播放体验以及p2p分享率
 - Tracker服务器根据访问IP的ISP、地域等进行智能调度
-- API已经固化，新版本完全兼容旧版本代码
 
 ## 安装方法
 
@@ -31,7 +30,7 @@ $ sudo gem install cocoapods
 
 #### Podfile
 
-为了使用 CoacoaPods 集成 CDNByeKit 到你的 Xcode 工程当中，你需要编写你的 `Podfile`
+为了使用 CoacoaPods 集成 CDNByeSDK 到你的 Xcode 工程当中，你需要编写你的 `Podfile`
 
 ```ruby
 target 'TargetName' do
@@ -45,9 +44,11 @@ end
 $ pod install
 ```
 
-## API文档
+## 系统要求
+支持iOS 9.0以上系统。
 
-## 后台管理系统
+## API文档
+参照[API.md](https://docs.cdnbye.com/#/ios/API)
 
 ## 反馈及意见
 

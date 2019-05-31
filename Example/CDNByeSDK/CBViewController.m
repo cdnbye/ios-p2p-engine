@@ -41,10 +41,6 @@
         
         _player.player = [[AVPlayer alloc] initWithURL:url];
         
-        // 全屏播放
-        //        [self presentViewController: self.player animated:YES completion:nil];
-        
-        
         self.player.view.frame = CGRectMake(0, 100, 400, 400);
         [self.view addSubview:self.player.view];
     }
