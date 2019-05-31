@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CDNByeSDK'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of CDNByeSDK.'
+  s.version          = '0.2.0'
+  s.summary          = 'CDNBye iOS SDK for Cross-platform P2P Streaming.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+CDNBye iOS SDK implements WebRTC datachannel to scale live/vod video streaming by peer-to-peer network using bittorrent-like protocol. The forming peer network can be layed over other CDNs or on top of the origin server. CDNBye installs a proxy between your video player and your stream which intercepts network requests and proxies them through a P2P engine.
                        DESC
 
-  s.homepage         = 'https://github.com/snowinszu/CDNByeSDK'
+  s.homepage         = 'https://docs.cdnbye.com/#/en/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'snowinszu' => '86755838@qq.com' }
-  s.source           = { :git => 'https://github.com/snowinszu/CDNByeSDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'cdnbye' => 'service@cdnbye.com' }
+  s.source           = { :git => 'https://github.com/cdnbye/ios-p2p-engine.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'CDNByeSDK/Classes/**/*'
+  s.ios.deployment_target = '9.0'
   
-  # s.resource_bundles = {
-  #   'CDNByeSDK' => ['CDNByeSDK/Assets/*.png']
-  # }
+  s.vendored_frameworks = 'CDNByeSDK/*.{framework}'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'GoogleWebRTC'
+  s.dependency 'SocketRocket'
+  s.dependency 'CocoaLumberjack'
+  s.dependency 'YYCache'
+  s.dependency 'GCDWebServer', '~> 3.0'
 end

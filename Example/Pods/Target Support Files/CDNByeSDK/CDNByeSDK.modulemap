@@ -1,0 +1,6 @@
+framework module CDNByeSDK {
+  umbrella header "CDNByeSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

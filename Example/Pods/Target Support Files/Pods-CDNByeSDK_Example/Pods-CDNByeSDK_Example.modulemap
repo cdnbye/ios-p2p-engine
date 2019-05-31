@@ -1,0 +1,6 @@
+framework module Pods_CDNByeSDK_Example {
+  umbrella header "Pods-CDNByeSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

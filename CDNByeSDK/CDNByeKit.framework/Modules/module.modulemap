@@ -1,0 +1,6 @@
+framework module CDNByeKit {
+  umbrella header "CDNByeKit.h"
+
+  export *
+  module * { export * }
+}
