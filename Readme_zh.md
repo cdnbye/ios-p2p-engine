@@ -48,7 +48,7 @@ $ pod install
 支持iOS 9.0以上系统。
 
 ## API文档
-参照[API.md](https://docs.cdnbye.com/#/ios/API)
+参照 [API.md](https://docs.cdnbye.com/#/ios/API)
 
 ## 反馈及意见
 

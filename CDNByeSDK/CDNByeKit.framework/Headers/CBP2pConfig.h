@@ -22,41 +22,49 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBP2pConfig : NSObject
 
-// WebRTC配置
+/** WebRTC configuration. WebRTC配置 */
 @property(nonatomic, strong, nullable) RTCConfiguration *webRTCConfig;
 
-// 信令服务器地址
+/** The address of signal server. 信令服务器地址 */
 @property(nonatomic, copy, nullable) NSString *wsSignalerAddr;
 
-// tracker服务器地址
+/** The address of tracker server. tracker服务器地址 */
 @property(nonatomic, copy, nullable) NSString *announce;
 
-// 是否开启P2P，默认true
+/** Enable or disable p2p engine. 是否开启P2P，默认true */
 @property(nonatomic, assign) BOOL p2pEnabled;
 
-// datachannel上传二进制数据的超时时间
+/** Upload timeout for WebRTC datachannel. datachannel上传二进制数据的超时时间 */
 @property(nonatomic, assign) NSTimeInterval dcUploadTimeout;
 
-// 每次通过datachannel发送的包的大小(默认64*1024)
+/** The maximum package size sent by datachannel. 每次通过datachannel发送的包的大小(默认64*1024) */
 @property(nonatomic, assign) NSUInteger packetSize;
 
-// 缓存大小
+/** The max size of binary data that can be stored in the cache for VOD. 缓存大小 */
 @property(nonatomic, assign) NSUInteger maxBufferSize;
 
-// 下载ts文件超时时间
+/** TS file download timeout. 下载ts文件超时时间 */
 @property(nonatomic, assign) NSTimeInterval downloadTimeout;
 
-// 用户自定义标签
+/** User defined tag which is presented in console. 用户自定义标签 */
 @property(nonatomic, copy) NSString *tag;
 
-// 代理商标识
+/** Identifier for agent. 代理商标识 */
 @property(nonatomic, copy) NSString *agent;
 
-// log的level，分为debug、info、warn、error、none
+/** Print log level. 打印日志级别 */
 @property(nonatomic, assign) CBLogLevel logLevel;
 
+/**
+ Create a new instance with default configuration.
+ 实例化方法，用默认配置初始化。
+ */
 + (instancetype)defaultConfiguration;
 
+/**
+ Create a new instance with default configuration.
+ 实例化方法，用默认配置初始化。
+ */
 - (instancetype)init;
 
 
