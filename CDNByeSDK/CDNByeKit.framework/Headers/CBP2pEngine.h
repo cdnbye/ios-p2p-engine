@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NSString * _Nullable (^ChannelId) (NSString *urlString);
+
 extern NSString *kP2pEngineDidReceiveStatistics ;
 
 @interface CBP2pEngine : NSObject
@@ -21,8 +23,10 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 /** The version of p2p protocol. p2p私有协议的版本号 */
 @property(nonatomic, copy, readonly, class) NSString *dcVersion;
 
-/** Enable or disable p2p engine. 开启或关闭P2P Engine */
-@property(nonatomic, assign) BOOL p2pEnabled;
+/** Get the connection state of p2p engine. 获取P2P Engine的连接状态 */
+@property(nonatomic, assign, readonly) BOOL p2pEnabled;
+
+//@property (nonatomic, strong) ChannelId channelId;
 
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -45,9 +49,14 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 - (NSURL *)parseStreamURL:(NSString *)origin NS_SWIFT_NAME(parse(streamURL:));
 
 /**
- Destroy CBP2pEngine instance, stop p2p and free used resources.
+ Stop p2p and free used resources.
  */
-- (void)destroy;
+- (void)stopP2p;
+
+/**
+ Restart p2p engine.
+ */
+- (void)restartP2p;
 
 @end
 
