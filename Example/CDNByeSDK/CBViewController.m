@@ -27,7 +27,8 @@
     
     [self.player.player play];
 }
-
+// http://222.186.50.155/hls/test2.m3u8
+// https://video-dev.github.io/streams/x36xhzz/url_2/193039199_mp4_h264_aac_ld_7.m3u8
 - (AVPlayerViewController *)player{
     if (!_player) {
         _player = [[AVPlayerViewController alloc] init];
@@ -37,7 +38,7 @@
         //        config.downloadTimeout = 3;
         CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:config];
         
-        NSURL *url = [engine parseStreamURL:@"https://video-dev.github.io/streams/x36xhzz/url_2/193039199_mp4_h264_aac_ld_7.m3u8"];
+        NSURL *url = [engine parseStreamURL:@"http://222.186.50.155/hls/test2.m3u8"];
         
         _player.player = [[AVPlayer alloc] initWithURL:url];
         

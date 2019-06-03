@@ -36,6 +36,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'TargetName' do
+# Uncomment the next line if you're using Swift
+# use_frameworks!
 pod 'CDNByeSDK'
 end
 ```
@@ -44,6 +46,18 @@ Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+## Usage
+#### Import:
+```ObjC
+#import <CDNByeKit/CBP2pEngine.h>
+```
+#### When initializing an AVPlayer (or any other video player) instance, before passing it a URL, pass that URL through CDNBye P2P Engine:
+```ObjC
+CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:nil];
+NSURL *url = [engine parseStreamURL:@"https://your_stream.m3u8"];   
+_player = [[AVPlayer alloc] initWithURL:url];
 ```
 
 ## Requirements

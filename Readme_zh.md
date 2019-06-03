@@ -33,7 +33,11 @@ $ sudo gem install cocoapods
 为了使用 CoacoaPods 集成 CDNByeSDK 到你的 Xcode 工程当中，你需要编写你的 `Podfile`
 
 ```ruby
+platform :ios, '9.0'
+
 target 'TargetName' do
+# Uncomment the next line if you're using Swift
+# use_frameworks!
 pod 'CDNByeSDK'
 end
 ```
@@ -42,6 +46,18 @@ end
 
 ```bash
 $ pod install
+```
+
+## 使用方法
+#### 导入项目：
+```ObjC
+#import <CDNByeKit/CBP2pEngine.h>
+```
+#### 获取本地播放地址并传给播放器：
+```ObjC
+CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:nil];
+NSURL *url = [engine parseStreamURL:@"https://your_stream.m3u8"];   
+_player = [[AVPlayer alloc] initWithURL:url];
 ```
 
 ## 系统要求
