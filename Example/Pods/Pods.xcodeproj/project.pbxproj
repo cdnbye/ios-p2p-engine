@@ -27,7 +27,6 @@
 		072B96C4338BD4C513F7134C90C9B703 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422C8A3FC826883B261F4D2034803C33 /* Foundation.framework */; };
 		0AABEBB53FA017708FED6AB7FF2278E1 /* DDOSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FC07DBE3A7E1AA5DD2B4265346B263E /* DDOSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D8220FF09FC0567DF6984CF807EB7FD /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AD6ECF198607B1BBADFC0351B3C6D /* SocketRocket-dummy.m */; };
-		10AB8882D4679CF504A9A2E1E6ED1ABF /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D283146E361288EE54B512114F5EB6 /* ReplaceMe.m */; };
 		11F56BAC551F32CE9918D4F325AB8F06 /* Pods-CDNByeSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8864DE6EE4AA2BDD5B7F0C7F48486003 /* Pods-CDNByeSDK_Example-dummy.m */; };
 		129DAA785AEE834E65363EFE86BDFEE2 /* GCDWebServerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FC0C6DDE7D761BCB7D4E8AD48BADAB /* GCDWebServerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13A81C411FD63E3BF8E658223C154B44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422C8A3FC826883B261F4D2034803C33 /* Foundation.framework */; };
@@ -335,7 +334,6 @@
 		D4E46443F0B073121B6A0BFE5A33AC64 /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = GCDWebServer/Core/GCDWebServerFunctions.h; sourceTree = "<group>"; };
 		D51040EC7E33F7CA4876C37C272820D0 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
 		D57231268E169F5F94E60C7ABFA87DF0 /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerMultiPartFormRequest.h; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.h; sourceTree = "<group>"; };
-		D9D283146E361288EE54B512114F5EB6 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = CDNByeSDK/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		DA2810BCBF49F79F1D25C6464E6E8064 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFD944206A31740E1CA9A616E404AD5 /* GCDWebServer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GCDWebServer-Info.plist"; sourceTree = "<group>"; };
 		DB79FB9995ACD0DEDB7346DF040B15DA /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
@@ -450,7 +448,6 @@
 		091ADFE16CD40ECDB7FAF36B319645F5 /* CDNByeSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D9D283146E361288EE54B512114F5EB6 /* ReplaceMe.m */,
 				12230174B470BD56E19C87E4B2E74881 /* Frameworks */,
 				4F7431DFB6B5397EAB5CEE32FAC738C1 /* Pod */,
 				A62DCA2DFAF6E1E7B8B63B0457E287D4 /* Support Files */,
@@ -1184,7 +1181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE4CCE64A68F52399E20B5AC1C1842A /* CDNByeSDK-dummy.m in Sources */,
-				10AB8882D4679CF504A9A2E1E6ED1ABF /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

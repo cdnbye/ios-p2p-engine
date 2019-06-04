@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NSString * _Nullable (^ChannelId) (NSString *urlString);
+typedef NSString * _Nonnull (^ChannelId) (NSString * _Nonnull urlString);
 
 extern NSString *kP2pEngineDidReceiveStatistics ;
 
@@ -24,9 +24,11 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 @property(nonatomic, copy, readonly, class) NSString *dcVersion;
 
 /** Get the connection state of p2p engine. 获取P2P Engine的连接状态 */
-@property(nonatomic, assign, readonly) BOOL p2pEnabled;
+@property(nonatomic, assign, readonly) BOOL connected;
 
-//@property (nonatomic, strong) ChannelId channelId;
+/** Some m3u8 urls play the same live/vod but have different paths on them. For example, example.com/clientId1/file.m3u8 and example.com/clientId2/file.m3u8. In this case, you can format a common channelId for them.
+    构造一个共同的chanelId，使实际观看同一直播/视频的节点处在相同频道中。 */
+@property (nonatomic, strong) ChannelId channelId;
 
 - (instancetype)init NS_UNAVAILABLE;
 
