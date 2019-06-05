@@ -1,7 +1,4 @@
-//
-//  ViewController.m
-//  SDKTest
-//
+
 //  Created by cdnbye on 2019/5/31.
 //  Copyright © 2019 cdnbye. All rights reserved.
 //
