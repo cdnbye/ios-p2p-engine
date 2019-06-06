@@ -1,4 +1,7 @@
-
+//
+//  ViewController.m
+//  SDKTest
+//
 //  Created by cdnbye on 2019/5/31.
 //  Copyright © 2019 cdnbye. All rights reserved.
 //
@@ -10,9 +13,13 @@
 
 #define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 
+NSString *VOD_URL = @"https://video-dev.github.io/streams/x36xhzz/url_2/193039199_mp4_h264_aac_ld_7.m3u8";
+NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-hftv.m3u8";
+
 @interface CBViewController ()
-@property (strong, nonatomic) AVPlayerViewController *player;
+@property (strong, nonatomic) AVPlayerViewController *playerVC;
 @property (strong, nonatomic) CBP2pEngine *engine;
+@property (strong, nonatomic) NSString *urlString;
 
 @property (assign, nonatomic) double totalHttpDownloaded;
 @property (assign, nonatomic) double totalP2pDownloaded;
@@ -24,6 +31,10 @@
 @property (strong, nonatomic) UILabel *labelP2pEnabled;
 @property (strong, nonatomic) UILabel *labelPeers;
 @property (strong, nonatomic) UILabel *labelVersion;
+@property (strong, nonatomic) UIButton *buttionReplay;
+@property (strong, nonatomic) UIButton *buttionSwitch;
+@property (strong, nonatomic) UIButton *buttionLive;
+@property (strong, nonatomic) UIButton *buttionVod;
 
 @end
 
@@ -32,23 +43,26 @@
 {
     [super viewDidLoad];
     
-    self.player = [[AVPlayerViewController alloc] init];
+    self.playerVC = [[AVPlayerViewController alloc] init];
     CBP2pConfig *config = [CBP2pConfig defaultConfiguration];
-    //    config.logLevel =  CBLogLevelDebug;
+    config.logLevel =  CBLogLevelDebug;
     config.tag = @"avplayer";
     self.engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:config];
     
-    NSURL *url = [self.engine parseStreamURL:@"https://video-dev.github.io/streams/x36xhzz/url_2/193039199_mp4_h264_aac_ld_7.m3u8"];
-    self.player.player = [[AVPlayer alloc] initWithURL:url];
+    self.urlString = VOD_URL;
+    NSURL *url = [self.engine parseStreamURL:self.urlString];
+    self.playerVC.player = [[AVPlayer alloc] initWithURL:url];
     
-    self.player.view.frame = CGRectMake(0, 40, SCREEN_WIDTH, 300);
-    [self.view addSubview:self.player.view];
+    self.playerVC.view.frame = CGRectMake(0, 40, SCREEN_WIDTH, 300);
+    [self.view addSubview:self.playerVC.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMsg:) name:kP2pEngineDidReceiveStatistics object:nil];
     
-    [self.player.player play];
+    [self.playerVC.player play];
     
     [self showStatisticsView];
+    
+    [self showButtonView];
 }
 /*
  Get the downloading statistics, including totalP2PDownloaded, totalP2PUploaded and totalHTTPDownloaded.
@@ -72,8 +86,10 @@
 
 - (void)showStatisticsView {
     UIView *statsView = [[UIView alloc] initWithFrame:CGRectMake(5, 350, SCREEN_WIDTH-10, 300)];
+    //    statsView.backgroundColor = [UIColor redColor];
     statsView.autoresizesSubviews = YES;
     [self.view addSubview:statsView];
+    
     
     CGFloat height = 40;
     CGFloat width = 160;
@@ -133,6 +149,82 @@
         state = @"No";
     }
     self.labelP2pEnabled.text = [NSString stringWithFormat:@"Connected: %@", state];
+}
+
+- (void)showButtonView {
+    UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(5, 530, SCREEN_WIDTH-10, 300)];
+    btnView.autoresizesSubviews = YES;
+    [self.view addSubview:btnView];
+    
+    CGFloat height = 40;
+    CGFloat width = 160;
+    UIButton *btnReplay = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, width, height)];
+    btnReplay.backgroundColor = [UIColor greenColor];
+    [btnReplay setTitle:@"Replay" forState:UIControlStateNormal];
+    [btnView addSubview:btnReplay];
+    self.buttionReplay = btnReplay;
+    [btnReplay addTarget:self action:@selector(btnReplayClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btnSwitch = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-width-20, 10, width, height)];
+    btnSwitch.backgroundColor = [UIColor purpleColor];
+    [btnSwitch setTitle:@"Switch" forState:UIControlStateNormal];
+    [btnView addSubview:btnSwitch];
+    self.buttionSwitch = btnSwitch;
+    [btnSwitch addTarget:self action:@selector(btnSwitchClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btnVod = [[UIButton alloc] initWithFrame:CGRectMake(10, height+30, width, height)];
+    btnVod.backgroundColor = [UIColor cyanColor];
+    [btnVod setTitle:@"VOD" forState:UIControlStateNormal];
+    [btnView addSubview:btnVod];
+    self.buttionVod = btnVod;
+    [btnVod addTarget:self action:@selector(btnVodClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btnLive = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-width-20, height+30, width, height)];
+    btnLive.backgroundColor = [UIColor orangeColor];
+    [btnLive setTitle:@"Live" forState:UIControlStateNormal];
+    [btnView addSubview:btnLive];
+    self.buttionLive = btnLive;
+    [btnLive addTarget:self action:@selector(btnLiveClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    for (UIButton *btn in btnView.subviews) {
+        btn.layer.masksToBounds = YES;
+        btn.layer.cornerRadius = 10;
+    }
+}
+
+-(void)btnReplayClick:(UIButton *)button {
+    if (!self.urlString) return;
+    NSURL *url = [self.engine parseStreamURL:self.urlString];
+    self.playerVC.player = nil;
+    self.playerVC.player = [[AVPlayer alloc] initWithURL:url];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMsg:) name:kP2pEngineDidReceiveStatistics object:nil];
+    [self.playerVC.player play];
+    [self clearData];
+}
+
+-(void)btnSwitchClick:(UIButton *)button {
+    if ([self.urlString isEqualToString:VOD_URL]) {
+        self.urlString = LIVE_URL;
+    } else {
+        self.urlString = VOD_URL;
+    }
+    [self btnReplayClick:nil];
+}
+
+-(void)btnVodClick:(UIButton *)button {
+    self.urlString = VOD_URL;
+    [self btnReplayClick:nil];
+}
+
+-(void)btnLiveClick:(UIButton *)button {
+    self.urlString = LIVE_URL;
+    [self btnReplayClick:nil];
+}
+
+- (void)clearData {
+    self.totalHttpDownloaded = 0;
+    self.totalP2pDownloaded = 0;
+    self.totalP2pUploaded = 0;
 }
 
 @end
