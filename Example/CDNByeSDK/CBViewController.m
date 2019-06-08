@@ -61,7 +61,6 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     [self.playerVC.player play];
     
     [self showStatisticsView];
-    
     [self showButtonView];
 }
 /*
@@ -197,9 +196,10 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     NSURL *url = [self.engine parseStreamURL:self.urlString];
     self.playerVC.player = nil;
     self.playerVC.player = [[AVPlayer alloc] initWithURL:url];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMsg:) name:kP2pEngineDidReceiveStatistics object:nil];
     [self.playerVC.player play];
+    
     [self clearData];
+    [self updateStatistics];
 }
 
 -(void)btnSwitchClick:(UIButton *)button {
