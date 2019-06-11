@@ -56,8 +56,9 @@ $ pod install
 #### 获取本地播放地址并传给播放器：
 ```ObjC
 CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:nil];
-NSURL *url = [engine parseStreamURL:@"https://your_stream.m3u8"];   
-_player = [[AVPlayer alloc] initWithURL:url];
+NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
+NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
+_player = [[AVPlayer alloc] initWithURL:parsedUrl];
 ```
 
 ## 系统要求

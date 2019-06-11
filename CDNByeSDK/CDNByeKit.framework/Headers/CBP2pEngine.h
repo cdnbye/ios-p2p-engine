@@ -45,10 +45,10 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 /**
  Get parsed local stream url by passing the original stream url(m3u8) to CBP2pEngine instance.
  
- @param origin  The original stream url(m3u8).
+ @param url  The original stream url(m3u8).
  @result A parsed local http url.
  */
-- (NSURL *)parseStreamURL:(NSString *)origin NS_SWIFT_NAME(parse(streamURL:));
+- (NSURL *)parseStreamURL:(NSURL *)url NS_SWIFT_NAME(parse(streamURL:));
 
 /**
  Stop p2p and free used resources.

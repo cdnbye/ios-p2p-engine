@@ -56,8 +56,9 @@ $ pod install
 #### When initializing an AVPlayer (or any other video player) instance, before passing it a URL, pass that URL through CDNBye P2P Engine:
 ```ObjC
 CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:nil];
-NSURL *url = [engine parseStreamURL:@"https://your_stream.m3u8"];   
-_player = [[AVPlayer alloc] initWithURL:url];
+NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
+NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
+_player = [[AVPlayer alloc] initWithURL:parsedUrl];
 ```
 
 ## Requirements

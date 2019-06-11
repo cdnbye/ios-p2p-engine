@@ -50,8 +50,9 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     self.engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:config];
     
     self.urlString = VOD_URL;
-    NSURL *url = [self.engine parseStreamURL:self.urlString];
-    self.playerVC.player = [[AVPlayer alloc] initWithURL:url];
+    NSURL *originalUrl = [NSURL URLWithString:self.urlString];
+    NSURL *parsedUrl = [self.engine parseStreamURL:originalUrl];
+    self.playerVC.player = [[AVPlayer alloc] initWithURL:parsedUrl];
     
     self.playerVC.view.frame = CGRectMake(0, 40, SCREEN_WIDTH, 300);
     [self.view addSubview:self.playerVC.view];
@@ -193,9 +194,10 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
 
 -(void)btnReplayClick:(UIButton *)button {
     if (!self.urlString) return;
-    NSURL *url = [self.engine parseStreamURL:self.urlString];
+    NSURL *originalUrl = [NSURL URLWithString:self.urlString];
+    NSURL *parsedUrl = [self.engine parseStreamURL:originalUrl];
     self.playerVC.player = nil;
-    self.playerVC.player = [[AVPlayer alloc] initWithURL:url];
+    self.playerVC.player = [[AVPlayer alloc] initWithURL:parsedUrl];
     [self.playerVC.player play];
     
     [self clearData];
