@@ -13,6 +13,7 @@ CDNBye iOS P2P Engine scales live/vod video streaming by peer-to-peer network us
 - Totally free of charge
 - Interconnect with CDNBye [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine)
 - Support live and VOD streams over HLS protocol(m3u8)
+- Support encrypted HLS stream
 - Very easy to  integrate with an existing ios project
 - Support any iOS player
 - Efficient scheduling policies to enhance the performance of P2P streaming
@@ -60,6 +61,7 @@ NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
 NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
 _player = [[AVPlayer alloc] initWithURL:parsedUrl];
 ```
+Where `token` is your Customer ID. Currently this SDK is free of charge, set it to "free" is ok.
 
 ## Requirements
 This library requires iOS 9.0+.
