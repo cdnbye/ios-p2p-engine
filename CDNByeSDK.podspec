@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CDNByeSDK'
-  s.version          = '0.4.3'
+  s.version          = '0.4.4'
   s.summary          = 'CDNBye iOS SDK for Cross-platform P2P Streaming.'
 
   s.description      = <<-DESC

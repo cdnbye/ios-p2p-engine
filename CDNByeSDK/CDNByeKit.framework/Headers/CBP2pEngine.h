@@ -43,6 +43,12 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 - (instancetype)initWithToken:(NSString *)token andP2pConfig:(nullable CBP2pConfig *)config NS_DESIGNATED_INITIALIZER NS_SWIFT_NAME(init(token:p2pConfig:));
 
 /**
+ Get the shared instance of CBP2pEngine.
+ Please call [CBP2pEngine initWithToken: andP2pConfig:] before calling it.
+ */
++ (instancetype)sharedInstance;
+
+/**
  Get parsed local stream url by passing the original stream url(m3u8) to CBP2pEngine instance.
  
  @param url  The original stream url(m3u8).
