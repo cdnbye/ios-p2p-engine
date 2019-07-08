@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Enable or disable p2p engine. 是否开启P2P，默认true */
 @property(nonatomic, assign) BOOL p2pEnabled;
 
+/** The port for local http server. 本地代理服务器的端口号 */
+@property(nonatomic, assign) NSUInteger localPort;
+
 /** Upload timeout for WebRTC datachannel. datachannel上传二进制数据的超时时间 */
 @property(nonatomic, assign) NSTimeInterval dcUploadTimeout;
 
