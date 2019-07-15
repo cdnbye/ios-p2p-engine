@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSUInteger localPort;
 
 /** Upload timeout for WebRTC datachannel. datachannel上传二进制数据的超时时间 */
-@property(nonatomic, assign) NSTimeInterval dcUploadTimeout;
+//@property(nonatomic, assign) NSTimeInterval dcUploadTimeout;    
 
 /** Download timeout for WebRTC datachannel. datachannel下载二进制数据的超时时间 */
 @property(nonatomic, assign) NSTimeInterval dcDownloadTimeout;
