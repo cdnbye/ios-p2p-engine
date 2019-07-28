@@ -60,7 +60,7 @@ NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
 NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
 _player = [[AVPlayer alloc] initWithURL:parsedUrl];
 ```
-其中token是用于标识用户的字符串，目前SDK是免费使用的，因此token设为"free"即可。
+其中token是用于标识用户的字符串，在调试阶段将token设为"free"即可。在上线前请替换成从控制台获取的token。
 
 ## 系统要求
 支持iOS 9.0以上系统。

@@ -60,7 +60,7 @@ NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
 NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
 _player = [[AVPlayer alloc] initWithURL:parsedUrl];
 ```
-Where `token` is your Customer ID. Currently this SDK is free of charge, set it to "free" is ok.
+Where `token` is your Customer ID. You can set it to "free" when debugging. Please replace it by your own token obtained from console before release.
 
 ## Requirements
 This library requires iOS 9.0+.
