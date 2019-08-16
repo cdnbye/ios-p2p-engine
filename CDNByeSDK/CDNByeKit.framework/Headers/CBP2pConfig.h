@@ -46,8 +46,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** The maximum package size sent by datachannel. 每次通过datachannel发送的包的大小(默认64*1024) */
 @property(nonatomic, assign) NSUInteger packetSize;
 
-/** The max size of binary data that can be stored in the cache for VOD. 缓存大小 */
-@property(nonatomic, assign) NSUInteger maxBufferSize;
+/** The max size of binary data that can be stored in the disk for VOD. 磁盘缓存大小 */
+@property(nonatomic, assign) NSUInteger diskCacheLimit;
+
+/** The max size of binary data that can be stored in the memory cache. 内存缓存大小 */
+@property(nonatomic, assign) NSUInteger memoryCacheLimit;
 
 /** TS file download timeout. 下载ts文件超时时间 */
 @property(nonatomic, assign) NSTimeInterval downloadTimeout;
@@ -60,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Print log level. 打印日志级别 */
 @property(nonatomic, assign) CBLogLevel logLevel;
+
+/** Max peer connections at the same time. 最大连接节点数量 */
+@property(nonatomic, assign) NSUInteger maxPeerConnections;
+
 
 /**
  Create a new instance with default configuration.

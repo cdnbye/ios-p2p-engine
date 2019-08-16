@@ -13,7 +13,7 @@
 
 #define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 
-NSString *VOD_URL = @"https://video-dev.github.io/streams/x36xhzz/url_2/193039199_mp4_h264_aac_ld_7.m3u8";
+NSString *VOD_URL = @"http://cn3.download05.com/hls/20190731/974f9c2a3e980d973874558456a59811/1564581572/index.m3u8";
 NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-hftv.m3u8";
 
 @interface CBViewController ()
