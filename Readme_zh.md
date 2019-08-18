@@ -75,6 +75,7 @@ _player = [[AVPlayer alloc] initWithURL:parsedUrl];
 
 ## 相关项目
 - [android-p2p-engine](https://github.com/cdnbye/android-p2p-engine) -  安卓端P2P流媒体加速引擎。
+- [flutter-p2p-engine](https://github.com/cdnbye/flutter-p2p-engine) - Flutter视频/直播APP省流量&加速神器, 由 [mjl0602](https://github.com/mjl0602) 贡献。
 - [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine) - 目前最好的Web端P2P流媒体方案。
 
 ## FAQ
