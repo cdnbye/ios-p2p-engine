@@ -194,6 +194,7 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
 
 -(void)btnReplayClick:(UIButton *)button {
     if (!self.urlString) return;
+    [self.playerVC.player pause];
     NSURL *originalUrl = [NSURL URLWithString:self.urlString];
     NSURL *parsedUrl = [self.engine parseStreamURL:originalUrl];
     self.playerVC.player = nil;
