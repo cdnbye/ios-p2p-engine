@@ -11,15 +11,21 @@
 
 @implementation CBAppDelegate
 
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    // Override point for customization after application launch.
+//
+//    CBP2pConfig *config = [CBP2pConfig defaultConfiguration];
+//    config.logLevel =  CBLogLevelDebug;
+//    config.tag = @"avplayer";
+//    [[CBP2pEngine sharedInstance] startWithToken:@"free" andP2pConfig:config];
+//
+//    return YES;
+//}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    
-    CBP2pConfig *config = [CBP2pConfig defaultConfiguration];
-    config.logLevel =  CBLogLevelDebug;
-    config.tag = @"avplayer";
-    [[CBP2pEngine sharedInstance] startWithToken:@"free" andP2pConfig:config];
-    
+    [[CBP2pEngine sharedInstance] startWithToken:@"free" andP2pConfig:nil];
     return YES;
 }
 

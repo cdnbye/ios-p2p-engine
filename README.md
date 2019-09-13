@@ -49,18 +49,7 @@ $ pod install
 ```
 
 ## Usage
-#### Import:
-```ObjC
-#import <CDNByeKit/CBP2pEngine.h>
-```
-#### When initializing an AVPlayer (or any other video player) instance, before passing it a URL, pass that URL through CDNBye P2P Engine:
-```ObjC
-CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:nil];
-NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
-NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
-_player = [[AVPlayer alloc] initWithURL:parsedUrl];
-```
-Where `token` is your Customer ID. You can set it to "free" when debugging. Please replace it by your own token obtained from console before release.
+See [document](https://docs.cdnbye.com/#/en/ios/usage)
 
 ## Requirements
 This library requires iOS 9.0+.

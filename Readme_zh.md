@@ -49,18 +49,7 @@ $ pod install
 ```
 
 ## 使用方法
-#### 导入项目：
-```ObjC
-#import <CDNByeKit/CBP2pEngine.h>
-```
-#### 获取本地播放地址并传给播放器：
-```ObjC
-CBP2pEngine *engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:nil];
-NSURL *originalUrl = [NSURL URLWithString:@"https://your_stream.m3u8"];
-NSURL *parsedUrl = [engine parseStreamURL:originalUrl];
-_player = [[AVPlayer alloc] initWithURL:parsedUrl];
-```
-其中token是用于标识用户的字符串，在调试阶段将token设为"free"即可。在上线前请替换成从控制台获取的token。
+参照 [文档](https://docs.cdnbye.com/#/ios/usage)
 
 ## 系统要求
 支持iOS 9.0以上系统。
