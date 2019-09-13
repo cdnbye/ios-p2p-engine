@@ -36,14 +36,12 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
- Create a new instance with token and the specified config.
- Multiple instances will make the p2p unstable.
+ Start p2p engine with token and the specified config.
  
  @param token  The token which can be obtained from CDNBye console.
  @param config  The specified p2p config or nil.
- @result A new engine object.
  */
-- (instancetype)initWithToken:(NSString *)token andP2pConfig:(nullable CBP2pConfig *)config NS_DESIGNATED_INITIALIZER NS_SWIFT_NAME(init(token:p2pConfig:));
+- (void)startWithToken:(NSString *)token andP2pConfig:(nullable CBP2pConfig *)config NS_SWIFT_NAME(start(token:p2pConfig:));
 
 /**
  Get the shared instance of CBP2pEngine.

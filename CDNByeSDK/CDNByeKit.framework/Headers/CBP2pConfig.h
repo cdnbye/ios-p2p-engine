@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** Upload timeout for WebRTC datachannel. datachannel上传二进制数据的超时时间 */
 //@property(nonatomic, assign) NSTimeInterval dcUploadTimeout;    
 
-/** Download timeout for WebRTC datachannel. datachannel下载二进制数据的超时时间 */
+/** Max download timeout for WebRTC datachannel. datachannel下载二进制数据的最大超时时间 */
 @property(nonatomic, assign) NSTimeInterval dcDownloadTimeout;
 
 /** The maximum package size sent by datachannel. 每次通过datachannel发送的包的大小(默认64*1024) */

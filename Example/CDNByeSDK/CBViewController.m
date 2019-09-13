@@ -13,12 +13,11 @@
 
 #define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 
-NSString *VOD_URL = @"http://cn3.download05.com/hls/20190731/974f9c2a3e980d973874558456a59811/1564581572/index.m3u8";
+NSString *VOD_URL = @"http://cn1.ruioushang.com/hls/20190824/6bbb04d6e14df9b331cf88409a8846c6/1566615719/index.m3u8";
 NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-hftv.m3u8";
 
 @interface CBViewController ()
 @property (strong, nonatomic) AVPlayerViewController *playerVC;
-@property (strong, nonatomic) CBP2pEngine *engine;
 @property (strong, nonatomic) NSString *urlString;
 
 @property (assign, nonatomic) double totalHttpDownloaded;
@@ -44,14 +43,10 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     [super viewDidLoad];
     
     self.playerVC = [[AVPlayerViewController alloc] init];
-    CBP2pConfig *config = [CBP2pConfig defaultConfiguration];
-    config.logLevel =  CBLogLevelDebug;
-    config.tag = @"avplayer";
-    self.engine = [[CBP2pEngine alloc] initWithToken:@"free" andP2pConfig:config];
     
     self.urlString = VOD_URL;
     NSURL *originalUrl = [NSURL URLWithString:self.urlString];
-    NSURL *parsedUrl = [self.engine parseStreamURL:originalUrl];
+    NSURL *parsedUrl = [[CBP2pEngine sharedInstance] parseStreamURL:originalUrl];
     self.playerVC.player = [[AVPlayer alloc] initWithURL:parsedUrl];
     
     self.playerVC.view.frame = CGRectMake(0, 40, SCREEN_WIDTH, 300);
@@ -145,7 +140,7 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     self.labelPeers.text = [NSString stringWithFormat:@"Peers: %@", @(self.peers.count)];
     
     NSString *state = @"Yes";
-    if (!self.engine.connected) {
+    if (![CBP2pEngine sharedInstance].connected) {
         state = @"No";
     }
     self.labelP2pEnabled.text = [NSString stringWithFormat:@"Connected: %@", state];
@@ -196,7 +191,7 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     if (!self.urlString) return;
     [self.playerVC.player pause];
     NSURL *originalUrl = [NSURL URLWithString:self.urlString];
-    NSURL *parsedUrl = [self.engine parseStreamURL:originalUrl];
+    NSURL *parsedUrl = [[CBP2pEngine sharedInstance] parseStreamURL:originalUrl];
     self.playerVC.player = nil;
     self.playerVC.player = [[AVPlayer alloc] initWithURL:parsedUrl];
     [self.playerVC.player play];
