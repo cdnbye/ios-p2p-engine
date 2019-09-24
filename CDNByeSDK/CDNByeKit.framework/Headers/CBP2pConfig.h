@@ -43,9 +43,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** Max download timeout for WebRTC datachannel. datachannel下载二进制数据的最大超时时间 */
 @property(nonatomic, assign) NSTimeInterval dcDownloadTimeout;
 
-/** The maximum package size sent by datachannel. 每次通过datachannel发送的包的大小(默认64*1024) */
-@property(nonatomic, assign) NSUInteger packetSize;
-
 /** The max size of binary data that can be stored in the disk for VOD. 磁盘缓存大小 */
 @property(nonatomic, assign) NSUInteger diskCacheLimit;
 
