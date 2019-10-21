@@ -18,6 +18,7 @@ CDNBye iOS P2P Engine scales live/vod video streaming by peer-to-peer network us
 - Efficient scheduling policies to enhance the performance of P2P streaming
 - Highly configurable
 - Use IP database to group up peers by ISP and regions
+- API frozen, new releases will not break your code
 
 ## Installation with CocoaPods
 
