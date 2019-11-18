@@ -15,6 +15,6 @@
 #import "YYKVStorage.h"
 #import "YYMemoryCache.h"
 
-FOUNDATION_EXPORT double YYCacheVersionNumber;
-FOUNDATION_EXPORT const unsigned char YYCacheVersionString[];
+FOUNDATION_EXPORT double CBCacheVersionNumber;
+FOUNDATION_EXPORT const unsigned char CBCacheVersionString[];
 

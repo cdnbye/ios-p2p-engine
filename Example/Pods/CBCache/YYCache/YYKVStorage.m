@@ -856,16 +856,21 @@ static UIApplication *_YYSharedApplication() {
     return NO;
 }
 
-- (BOOL)removeItemsToFitSize:(int)maxSize {
-    if (maxSize == INT_MAX) return YES;
-    if (maxSize <= 0) return [self removeAllItems];
+- (NSMutableArray *)removeItemsToFitSize:(int)maxSize {
+    NSMutableArray *arr = [NSMutableArray array];
+    if (maxSize == INT_MAX) return arr;
+    if (maxSize <= 0) {
+        [self removeAllItems];
+        return arr;
+    }
     
     int total = [self _dbGetTotalItemSize];
-    if (total < 0) return NO;
-    if (total <= maxSize) return YES;
+    if (total < 0) return arr;
+    if (total <= maxSize) return arr;
     
     NSArray *items = nil;
     BOOL suc = NO;
+    
     do {
         int perCount = 16;
         items = [self _dbGetItemSizeInfoOrderByTimeAscWithLimit:perCount];
@@ -874,6 +879,7 @@ static UIApplication *_YYSharedApplication() {
                 if (item.filename) {
                     [self _fileDeleteWithName:item.filename];
                 }
+                [arr addObject:item.key];
                 suc = [self _dbDeleteItemWithKey:item.key];
                 total -= item.size;
             } else {
@@ -883,7 +889,7 @@ static UIApplication *_YYSharedApplication() {
         }
     } while (total > maxSize && items.count > 0 && suc);
     if (suc) [self _dbCheckpoint];
-    return suc;
+    return arr;
 }
 
 - (BOOL)removeItemsToFitCount:(int)maxCount {

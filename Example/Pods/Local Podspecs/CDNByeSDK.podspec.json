@@ -1,6 +1,6 @@
 {
   "name": "CDNByeSDK",
-  "version": "0.2.0",
+  "version": "0.10.0",
   "summary": "CDNBye iOS SDK for Cross-platform P2P Streaming.",
   "description": "CDNBye iOS SDK implements WebRTC datachannel to scale live/vod video streaming by peer-to-peer network using bittorrent-like protocol. The forming peer network can be layed over other CDNs or on top of the origin server. CDNBye installs a proxy between your video player and your stream which intercepts network requests and proxies them through a P2P engine.",
   "homepage": "https://docs.cdnbye.com/#/en/",
@@ -13,28 +13,27 @@
   },
   "source": {
     "git": "https://github.com/cdnbye/ios-p2p-engine.git",
-    "tag": "0.2.0"
+    "tag": "0.10.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "CDNByeSDK/Classes/**/*",
   "vendored_frameworks": "CDNByeSDK/*.{framework}",
   "dependencies": {
     "GoogleWebRTC": [
-
+      "~> 1.1"
     ],
     "SocketRocket": [
-
+      "~> 0.5"
     ],
     "CocoaLumberjack": [
-
+      "~> 3.5"
     ],
-    "YYCache": [
-
+    "CBCache": [
+      "~> 2.0"
     ],
     "GCDWebServer": [
-      "~> 3.0"
+      "~> 3.5"
     ]
   }
 }

@@ -13,6 +13,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol YYDiskCacheDelegate <NSObject>
+@optional
+
+- (void)diskCacheDidEvictKeys:(NSMutableArray *)keys;
+
+@end
+
 /**
  YYDiskCache is a thread-safe cache that stores key-value pairs backed by SQLite
  and file system (similar to NSURLCache's disk cache).
@@ -28,12 +35,15 @@ NS_ASSUME_NONNULL_BEGIN
  You may compile the latest version of sqlite and ignore the libsqlite3.dylib in
  iOS system to get 2x~4x speed up.
  */
+
 @interface YYDiskCache : NSObject
 
 #pragma mark - Attribute
 ///=============================================================================
 /// @name Attribute
 ///=============================================================================
+
+@property (nonatomic,weak) id<YYDiskCacheDelegate> delegate;
 
 /** The name of the cache. Default is nil. */
 @property (nullable, copy) NSString *name;

@@ -205,7 +205,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  @param maxSize The specified size in bytes.
  @return Whether succeed.
  */
-- (BOOL)removeItemsToFitSize:(int)maxSize;
+- (NSMutableArray *)removeItemsToFitSize:(int)maxSize;
 
 /**
  Remove items to make the total count not larger than a specified count.

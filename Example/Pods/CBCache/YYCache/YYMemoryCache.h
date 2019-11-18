@@ -13,6 +13,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol YYMemoryCacheDelegate <NSObject>
+@optional
+
+- (void)memoryCacheDidEvictKeys:(NSMutableArray *)keys;
+
+@end
+
 /**
  YYMemoryCache is a fast in-memory cache that stores key-value pairs.
  In contrast to NSDictionary, keys are retained and not copied.
@@ -34,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///=============================================================================
 /// @name Attribute
 ///=============================================================================
+
+@property (nonatomic,weak) id<YYMemoryCacheDelegate> delegate;
 
 /** The name of the cache. Default is nil. */
 @property (nullable, copy) NSString *name;

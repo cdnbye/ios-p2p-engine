@@ -1,0 +1,6 @@
+framework module CBCache {
+  umbrella header "CBCache-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -109,8 +109,13 @@ static void _YYDiskCacheSetGlobal(YYDiskCache *cache) {
 
 - (void)_trimToCost:(NSUInteger)costLimit {
     if (costLimit >= INT_MAX) return;
-    [_kv removeItemsToFitSize:(int)costLimit];
-    
+    NSMutableArray *removedItems = [_kv removeItemsToFitSize:(int)costLimit];
+    if (removedItems.count > 0) {
+        if ([self->_delegate respondsToSelector:@selector(diskCacheDidEvictKeys:)])
+        {
+            [self->_delegate diskCacheDidEvictKeys:removedItems];
+        }
+    }
 }
 
 - (void)_trimToCount:(NSUInteger)countLimit {

@@ -205,15 +205,19 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
     } else if (_lru->_totalCost <= costLimit) {
         finish = YES;
     }
+    
     pthread_mutex_unlock(&_lock);
     if (finish) return;
-    
     NSMutableArray *holder = [NSMutableArray new];
+    NSMutableArray *removedItems = [NSMutableArray new];
     while (!finish) {
         if (pthread_mutex_trylock(&_lock) == 0) {
             if (_lru->_totalCost > costLimit) {
                 _YYLinkedMapNode *node = [_lru removeTailNode];
-                if (node) [holder addObject:node];
+                if (node) {
+                    [holder addObject:node];
+                    [removedItems addObject:node->_key];
+                }
             } else {
                 finish = YES;
             }
@@ -227,6 +231,10 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
         dispatch_async(queue, ^{
             [holder count]; // release in queue
         });
+        if ([self->_delegate respondsToSelector:@selector(memoryCacheDidEvictKeys:)])
+        {
+            [self->_delegate memoryCacheDidEvictKeys:removedItems];
+        }
     }
 }
 

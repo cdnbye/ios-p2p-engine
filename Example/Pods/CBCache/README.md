@@ -3,8 +3,8 @@ YYCache
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/ibireme/YYCache/master/LICENSE)&nbsp;
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)&nbsp;
-[![CocoaPods](http://img.shields.io/cocoapods/v/YYCache.svg?style=flat)](http://cocoapods.org/?q= YYCache)&nbsp;
-[![CocoaPods](http://img.shields.io/cocoapods/p/YYCache.svg?style=flat)](http://cocoapods.org/?q= YYCache)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/v/YYCache.svg?style=flat)](http://cocoapods.org/pods/YYCache)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/p/YYCache.svg?style=flat)](http://cocoadocs.org/docsets/YYCache)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 [![Build Status](https://travis-ci.org/ibireme/YYCache.svg?branch=master)](https://travis-ci.org/ibireme/YYCache)
 
@@ -76,7 +76,7 @@ You can also install documentation locally using [appledoc](https://github.com/t
 
 Requirements
 ==============
-This library requires `iOS 6.0+` and `Xcode 7.0+`.
+This library requires `iOS 6.0+` and `Xcode 8.0+`.
 
 
 License
@@ -102,7 +102,7 @@ iPhone 6 上，磁盘缓存每秒响应次数 (越高越好):
 ![Disk benchmark result](https://raw.github.com/ibireme/YYCache/master/Benchmark/Result_disk.png
 )
 
-推荐到 SQLite 官网[下载](http://www.sqlite.org/download.html)和编译最新的 SQLite，以替换 iOS 自带的 libsqlite3.dylib，以获得最高 1.5～3 倍的性能提升。
+推荐到 SQLite 官网[下载](http://www.sqlite.org/download.html)和编译最新的 SQLite，替换 iOS 自带的 libsqlite3.dylib，以获得更好的性能。
 
 更多测试代码和用例见 `Benchmark/CacheBenchmark.xcodeproj`。
 
@@ -156,7 +156,7 @@ iPhone 6 上，磁盘缓存每秒响应次数 (越高越好):
 
 系统要求
 ==============
-该项目最低支持 `iOS 6.0` 和 `Xcode 7.0`。
+该项目最低支持 `iOS 6.0` 和 `Xcode 8.0`。
 
 
 许可证
@@ -166,6 +166,6 @@ YYCache 使用 MIT 许可证，详情见 LICENSE 文件。
 
 相关链接
 ==============
-[YYCache 设计思路与技术细节](http://blog.ibireme.com/2015/10/26/yycache/)
+[YYCache 设计思路与技术细节](https://blog.ibireme.com/2015/10/26/yycache/)
 
 

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CDNByeSDK'
-  s.version          = '0.9.0'
+  s.version          = '0.10.0'
   s.summary          = 'CDNBye iOS SDK for Cross-platform P2P Streaming.'
 
   s.description      = <<-DESC
@@ -20,6 +20,6 @@ CDNBye iOS SDK implements WebRTC datachannel to scale live/vod video streaming b
   s.dependency 'GoogleWebRTC', '~> 1.1'
   s.dependency 'SocketRocket', '~> 0.5'
   s.dependency 'CocoaLumberjack', '~> 3.5'
-  s.dependency 'YYCache', '~> 1.0'
+  s.dependency 'CBCache', '~> 2.0'
   s.dependency 'GCDWebServer', '~> 3.5'
 end
