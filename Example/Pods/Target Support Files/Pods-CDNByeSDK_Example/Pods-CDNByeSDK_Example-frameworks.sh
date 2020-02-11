@@ -153,18 +153,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CBCache/CBCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
   install_framework "${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CBCache/CBCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
   install_framework "${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
