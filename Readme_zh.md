@@ -63,6 +63,9 @@ $ pod install
 
 当你遇到任何问题时，可以通过在 GitHub 的 repo 提交 issues 来反馈问题，请尽可能的描述清楚遇到的问题，如果有错误信息也一同附带，并且在 Labels 中指明类型为 bug 或者其他。
 
+## 客户案例
+[<img src="https://cdnbye.oss-cn-beijing.aliyuncs.com/pic/dxxw.png" width="120">](https://apps.apple.com/cn/app/%E5%A4%A7%E8%B1%A1%E6%96%B0%E9%97%BB-%E6%B2%B3%E5%8D%97%E7%83%AD%E7%82%B9%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF/id1463164699)
+
 ## 相关项目
 - [android-p2p-engine](https://gitee.com/cdnbye/android-p2p-engine) - 安卓端P2P流媒体加速引擎。
 - [flutter-p2p-engine](https://gitee.com/cdnbye/flutter-p2p-engine) - Flutter视频/直播APP省流量&加速神器, 由 [mjl0602](https://github.com/mjl0602) 贡献。

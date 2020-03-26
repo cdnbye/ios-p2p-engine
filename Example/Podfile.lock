@@ -1,11 +1,11 @@
 PODS:
-  - CDNByeSDK (1.0.0):
+  - CDNByeSDK (1.3.0):
     - CocoaAsyncSocket (~> 7.6)
     - CocoaLumberjack (~> 3.5)
     - GCDWebServer (~> 3.5)
-    - GoogleWebRTC (~> 1.1)
+    - GoogleWebRTC (= 1.1.26989)
+    - PINCache (~> 2.3)
     - SocketRocket (~> 0.5)
-    - YYCache (~> 1.0)
   - CocoaAsyncSocket (7.6.3)
   - CocoaLumberjack (3.5.3):
     - CocoaLumberjack/Core (= 3.5.3)
@@ -13,9 +13,9 @@ PODS:
   - GCDWebServer (3.5.2):
     - GCDWebServer/Core (= 3.5.2)
   - GCDWebServer/Core (3.5.2)
-  - GoogleWebRTC (1.1.27828)
+  - GoogleWebRTC (1.1.26989)
+  - PINCache (2.3)
   - SocketRocket (0.5.1)
-  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - CDNByeSDK (from `../`)
@@ -26,21 +26,21 @@ SPEC REPOS:
     - CocoaLumberjack
     - GCDWebServer
     - GoogleWebRTC
+    - PINCache
     - SocketRocket
-    - YYCache
 
 EXTERNAL SOURCES:
   CDNByeSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CDNByeSDK: d159f49ce4b1f17205803fbea03cb019513649a9
+  CDNByeSDK: b7da2274cd1e63a1f4348061dce0dd3f93723f0f
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
-  GoogleWebRTC: 55e46bee9ac2a4961542e9571bea589b64493f45
+  GoogleWebRTC: ee984407e3a0fa1183d605900d9c71eee8cbcbdf
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
 PODFILE CHECKSUM: ab3f18f668f3ed781d11a9c76c3014cf6c6bdac0
 

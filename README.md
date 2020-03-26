@@ -1,7 +1,7 @@
 **English | [简体中文](Readme_zh.md)**
 
 <h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://cdnbye.oss-cn-beijing.aliyuncs.com/pic/cdnbye.png" alt="cdnbye logo"></a></h1>
-<h4 align="center">Save Your Bandwidth using WebRTC.</h4>
+<h4 align="center">Boost Your Stream using WebRTC.</h4>
 <p align="center">
 <a href="https://cocoapods.org/pods/CDNByeSDK"><img src="https://img.shields.io/cocoapods/v/CDNByeSDK.svg?style=flat" alt="version"></a>
 <a href="https://cocoapods.org/pods/CDNByeSDK"><img src="https://img.shields.io/cocoapods/p/CDNByeSDK.svg?style=flat" alt="platform"></a>
@@ -62,6 +62,9 @@ See [API.md](https://docs.cdnbye.com/#/en/ios/API)
 ## Issue & Feature Request
 - If you found a bug, open an issue.
 - If you have a feature request, open an issue.
+
+## They are using CDNBye
+[<img src="https://cdnbye.oss-cn-beijing.aliyuncs.com/pic/dxxw.png" width="120">](https://apps.apple.com/cn/app/%E5%A4%A7%E8%B1%A1%E6%96%B0%E9%97%BB-%E6%B2%B3%E5%8D%97%E7%83%AD%E7%82%B9%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF/id1463164699)
 
 ## Related Projects
 - [android-p2p-engine](https://github.com/cdnbye/android-p2p-engine) -  iOS Video P2P Engine for Any Player.

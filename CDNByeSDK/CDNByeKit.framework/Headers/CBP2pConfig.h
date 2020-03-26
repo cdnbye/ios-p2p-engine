@@ -64,6 +64,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Use HTTP ranges requests where it is possible. Allows to continue (and not start over) aborted P2P downloads over HTTP. 在可能的情况下使用Http Range请求来补足p2p下载超时的剩余部分数据 */
 @property(nonatomic, assign) BOOL useHttpRange;
 
+/** Set User-Agent to http header while requesting ts. 设置请求ts时候的User-Agent */
+@property(nonatomic, copy) NSString *userAgent;
+
 /**
  Create a new instance with default configuration.
  实例化方法，用默认配置初始化。

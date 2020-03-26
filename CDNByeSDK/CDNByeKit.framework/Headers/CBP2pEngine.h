@@ -17,6 +17,9 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 
 @interface CBP2pEngine : NSObject
 
+/** The config of SDK. SDK的P2P配置 */
+@property(nonatomic, strong) CBP2pConfig *p2pConfig;
+
 /** The version of SDK. SDK的版本号 */
 @property(nonatomic, copy, readonly, class) NSString *engineVersion;
 

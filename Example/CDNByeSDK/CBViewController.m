@@ -13,7 +13,7 @@
 
 #define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 
-NSString *VOD_URL = @"http://cn1.kankia.com/hls/20191220/596ff11e1db2c3969da01367fc41d3b0/1576776716/index.m3u8";
+NSString *VOD_URL = @"https://www.nmgxwhz.com:65/20200107/17hTnjxI/index.m3u8";
 NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-hftv.m3u8";
 
 @interface CBViewController ()
@@ -24,6 +24,7 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
 @property (assign, nonatomic) double totalP2pDownloaded;
 @property (assign, nonatomic) double totalP2pUploaded;
 @property (strong, nonatomic) NSArray *peers;
+@property (assign, nonatomic) BOOL serverConnected;
 @property (strong, nonatomic) UILabel *labelOffload;
 @property (strong, nonatomic) UILabel *labelRatio;
 @property (strong, nonatomic) UILabel *labelUpload;
@@ -73,6 +74,8 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
         self.totalP2pUploaded += [dict[@"p2pUploaded"] doubleValue]/1024;
     } else if (dict[@"peers"]) {
         self.peers = (NSArray *)dict[@"peers"];
+    } else if (dict[@"serverConnected"]) {
+        self.serverConnected = [dict[@"serverConnected"] boolValue];
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         [self updateStatistics];
@@ -139,10 +142,7 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     self.labelRatio.text = [NSString stringWithFormat:@"P2P Ratio: %.0f%%", ratio*100];
     self.labelPeers.text = [NSString stringWithFormat:@"Peers: %@", @(self.peers.count)];
     
-    NSString *state = @"Yes";
-    if (![CBP2pEngine sharedInstance].connected) {
-        state = @"No";
-    }
+    NSString *state = self.serverConnected ? @"Yes" : @"No";
     self.labelP2pEnabled.text = [NSString stringWithFormat:@"Connected: %@", state];
 }
 
