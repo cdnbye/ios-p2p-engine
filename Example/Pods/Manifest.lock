@@ -6,13 +6,13 @@ PODS:
     - GoogleWebRTC (= 1.1.26989)
     - PINCache (~> 2.3)
     - SocketRocket (~> 0.5)
-  - CocoaAsyncSocket (7.6.3)
-  - CocoaLumberjack (3.5.3):
-    - CocoaLumberjack/Core (= 3.5.3)
-  - CocoaLumberjack/Core (3.5.3)
-  - GCDWebServer (3.5.2):
-    - GCDWebServer/Core (= 3.5.2)
-  - GCDWebServer/Core (3.5.2)
+  - CocoaAsyncSocket (7.6.4)
+  - CocoaLumberjack (3.6.1):
+    - CocoaLumberjack/Core (= 3.6.1)
+  - CocoaLumberjack/Core (3.6.1)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
   - GoogleWebRTC (1.1.26989)
   - PINCache (2.3)
   - SocketRocket (0.5.1)
@@ -35,9 +35,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CDNByeSDK: b7da2274cd1e63a1f4348061dce0dd3f93723f0f
-  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   GoogleWebRTC: ee984407e3a0fa1183d605900d9c71eee8cbcbdf
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531

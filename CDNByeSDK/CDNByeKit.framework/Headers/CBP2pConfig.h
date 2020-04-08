@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Enable or disable p2p engine. 是否开启P2P，默认true */
 @property(nonatomic, assign) BOOL p2pEnabled;
 
+/** Only allow uploading on Wi-Fi. 是否只在wifi模式上传数据 */
+@property(nonatomic, assign) BOOL wifiOnly;
+
 /** The port for local http server. 本地代理服务器的端口号 */
 @property(nonatomic, assign) NSUInteger localPort;    
 

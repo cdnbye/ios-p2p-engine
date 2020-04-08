@@ -53,7 +53,7 @@ $ pod install
 See [document](https://docs.cdnbye.com/#/en/ios/usage)
 
 ## Requirements
-This library requires iOS 9.0+.
+This library requires iOS 10.0+.
 <br>NOTICE: This framework doesn’t support bitcode currently.
 
 ## API and Configuration

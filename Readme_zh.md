@@ -53,7 +53,7 @@ $ pod install
 参照 [文档](https://docs.cdnbye.com/#/ios/usage)
 
 ## 系统要求
-支持iOS 9.0以上系统。
+支持iOS 10.0以上系统。
 <br>注意：本SDK暂时不支持bitcode，在发布前请在xcode关闭bitcode。
 
 ## API文档
