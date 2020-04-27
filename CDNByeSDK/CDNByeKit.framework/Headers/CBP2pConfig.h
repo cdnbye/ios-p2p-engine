@@ -55,9 +55,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** User defined tag which is presented in console. 用户自定义标签 */
 @property(nonatomic, copy) NSString *tag;
 
-/** Identifier for agent. 代理商标识 */
-@property(nonatomic, copy) NSString *agent;
-
 /** Print log level. 打印日志级别 */
 @property(nonatomic, assign) CBLogLevel logLevel;
 
