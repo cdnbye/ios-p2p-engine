@@ -13,7 +13,7 @@ CDNBye iOS SDK implements WebRTC datachannel to scale live/vod video streaming b
   s.author           = { 'cdnbye' => 'service@cdnbye.com' }
   s.source           = { :git => 'https://github.com/cdnbye/ios-p2p-engine.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   
   s.vendored_frameworks = 'CDNByeSDK/*.{framework}'
 
