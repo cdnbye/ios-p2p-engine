@@ -50,14 +50,14 @@ $ pod install
 ```
 
 ## Usage
-See [document](https://docs.cdnbye.com/#/en/ios/usage)
+See [document](https://p2p.cdnbye.com/en/views/ios/usage.html)
 
 ## Requirements
 This library requires iOS 10.0+.
 <br>NOTICE: This framework doesn’t support bitcode currently.
 
 ## API and Configuration
-See [API.md](https://docs.cdnbye.com/#/en/ios/API)
+See [API.md](https://p2p.cdnbye.com/en/views/ios/API.html)
 
 ## Issue & Feature Request
 - If you found a bug, open an issue.
@@ -72,7 +72,7 @@ See [API.md](https://docs.cdnbye.com/#/en/ios/API)
 - [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine) - Web Video Delivery Technology with No Plugins.
 
 ## FAQ
-We have collected some [frequently asked questions](https://docs.cdnbye.com/#/en/FAQ). Before reporting an issue, please search if the FAQ has the answer to your problem.
+We have collected some [frequently asked questions](https://p2p.cdnbye.com/en/views/FAQ.html). Before reporting an issue, please search if the FAQ has the answer to your problem.
 
 ## Contact Us
 Email：service@cdnbye.com
