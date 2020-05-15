@@ -16,7 +16,7 @@
 NSString *VOD_URL = @"https://www.nmgxwhz.com:65/20200107/17hTnjxI/index.m3u8";
 NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-hftv.m3u8";
 
-@interface CBViewController ()
+@interface CBViewController ()<CBP2pEngineDelegate>
 @property (strong, nonatomic) AVPlayerViewController *playerVC;
 @property (strong, nonatomic) NSString *urlString;
 
@@ -44,6 +44,8 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     [super viewDidLoad];
     
     self.playerVC = [[AVPlayerViewController alloc] init];
+    
+    [CBP2pEngine sharedInstance].delegate = self;
     
     self.urlString = VOD_URL;
     NSURL *originalUrl = [NSURL URLWithString:self.urlString];
@@ -223,6 +225,22 @@ NSString *LIVE_URL = @"http://hefeng.live.tempsource.cjyun.org/videotmp/s10100-h
     self.totalHttpDownloaded = 0;
     self.totalP2pDownloaded = 0;
     self.totalP2pUploaded = 0;
+}
+
+#pragma mark - **************** CBP2pEngineDelegate
+-(NSTimeInterval)bufferedDuration {
+    NSTimeInterval currentTime = CMTimeGetSeconds([self.playerVC.player currentTime]);
+    NSTimeInterval bufferedDuration = 0;
+    for (NSValue *value in [[self.playerVC.player currentItem] loadedTimeRanges]) {
+        CMTimeRange timeRange = [value CMTimeRangeValue];
+        NSTimeInterval start = CMTimeGetSeconds(timeRange.start);
+        NSTimeInterval end = start + CMTimeGetSeconds(timeRange.duration);
+        if (currentTime >= start && currentTime <= end) {
+            bufferedDuration = end - currentTime;
+            break;
+        }
+    }
+    return bufferedDuration;
 }
 
 @end

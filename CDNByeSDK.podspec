@@ -1,11 +1,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CDNByeSDK'
-  s.version          = '1.5.0'
+  s.version          = '1.6.0'
   s.summary          = 'CDNBye iOS SDK for Cross-platform P2P Streaming.'
 
   s.description      = <<-DESC
-CDNBye iOS SDK implements WebRTC datachannel to scale live/vod video streaming by peer-to-peer network using bittorrent-like protocol. The forming peer network can be layed over other CDNs or on top of the origin server. CDNBye installs a proxy between your video player and your stream which intercepts network requests and proxies them through a P2P engine.
+CDNBye iOS SDK implements WebRTC datachannel to scale live, vod video streaming by peer-to-peer network using bittorrent-like protocol. The forming peer network can be layed over other CDNs or on top of the origin server. CDNBye installs a proxy between your video player and your stream which intercepts network requests and proxies them through a P2P engine.
                        DESC
 
   s.homepage         = 'https://docs.cdnbye.com/#/en/'
@@ -17,7 +17,7 @@ CDNBye iOS SDK implements WebRTC datachannel to scale live/vod video streaming b
   
   s.vendored_frameworks = 'CDNByeSDK/*.{framework}'
 
-  s.dependency 'GoogleWebRTC', '~> 1.1'
+  s.dependency 'WebRTCDatachannel', '0.0.1'
   s.dependency 'SocketRocket', '~> 0.5'
   s.dependency 'CocoaLumberjack', '~> 3.5'
   s.dependency 'PINCache', '~> 2.3'

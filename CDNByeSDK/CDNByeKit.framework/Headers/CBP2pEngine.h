@@ -15,6 +15,14 @@ typedef NSString * _Nonnull (^ChannelId) (NSString * _Nonnull urlString);
 
 extern NSString *kP2pEngineDidReceiveStatistics ;
 
+@protocol CBP2pEngineDelegate <NSObject>
+    
+@optional
+
+- (NSTimeInterval)bufferedDuration;
+
+@end
+
 @interface CBP2pEngine : NSObject
 
 /** The config of SDK. SDK的P2P配置 */
@@ -35,6 +43,9 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 /** Some m3u8 urls play the same live/vod but have different paths on them. For example, example.com/clientId1/file.m3u8 and example.com/clientId2/file.m3u8. In this case, you can format a common channelId for them.
     构造一个共同的chanelId，使实际观看同一直播/视频的节点处在相同频道中。 */
 @property (nonatomic, strong) ChannelId channelId;
+
+/** The delegate of Player Stats. */
+@property (nonatomic, weak) id<CBP2pEngineDelegate> delegate;
 
 - (instancetype)init NS_UNAVAILABLE;
 
