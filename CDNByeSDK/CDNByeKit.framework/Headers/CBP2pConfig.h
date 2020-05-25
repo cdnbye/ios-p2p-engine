@@ -67,6 +67,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Set User-Agent to http header while requesting ts. 设置请求ts时候的User-Agent */
 @property(nonatomic, copy) NSString *userAgent;
 
+/** Whether to enable signal compression, which can reduce the bandwidth of signaling server. */
+@property(nonatomic, assign) BOOL signalCompressed;
+
 /**
  Create a new instance with default configuration.
  实例化方法，用默认配置初始化。
