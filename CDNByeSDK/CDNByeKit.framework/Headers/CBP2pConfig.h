@@ -64,11 +64,14 @@ NS_ASSUME_NONNULL_BEGIN
 /** Use HTTP ranges requests where it is possible. Allows to continue (and not start over) aborted P2P downloads over HTTP. 在可能的情况下使用Http Range请求来补足p2p下载超时的剩余部分数据 */
 @property(nonatomic, assign) BOOL useHttpRange;
 
-/** Set User-Agent to http header while requesting ts. 设置请求ts时候的User-Agent */
-@property(nonatomic, copy) NSString *userAgent;
+/** Set http headers while requesting ts and m3u8. 设置请求ts和m3u8时的http headers */
+@property(nonatomic, copy) NSDictionary *httpHeaders;
 
 /** Whether to enable signal compression, which can reduce the bandwidth of signaling server. */
 @property(nonatomic, assign) BOOL signalCompressed;
+
+/** Required while using customized channelId(5 <= length <= 15), recommended to set it as the unique identifier of your organization. 如果使用自定义的channelId，则此字段必须设置，且长度必须大于4个字符并且小于16个字符，建议设置成你所在组织的唯一标识 */
+@property(nonatomic, copy) NSString *channelIdPrefix;
 
 /**
  Create a new instance with default configuration.

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString * _Nonnull (^ChannelId) (NSString * _Nonnull urlString);
 
+typedef NSString * _Nonnull (^SegmentId) (NSUInteger level, NSUInteger sn, NSString * _Nonnull urlString);
+
 extern NSString *kP2pEngineDidReceiveStatistics ;
 
 @protocol CBP2pEngineDelegate <NSObject>
@@ -31,7 +33,7 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 /** The version of SDK. SDK的版本号 */
 @property(nonatomic, copy, readonly, class) NSString *engineVersion;
 
-/** The version of p2p protocol. p2p私有协议的版本号 */
+/** The version of p2p protocol, ，only have the same protocol version as another platform can both interconnect with each other. p2p私有协议的版本号，与其他平台互通的前提是 P2P 协议版本号相同。 */
 @property(nonatomic, copy, readonly, class) NSString *dcVersion;
 
 /** Get the connection state of p2p engine. 获取P2P Engine的连接状态 */
@@ -43,6 +45,9 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 /** Some m3u8 urls play the same live/vod but have different paths on them. For example, example.com/clientId1/file.m3u8 and example.com/clientId2/file.m3u8. In this case, you can format a common channelId for them.
     构造一个共同的chanelId，使实际观看同一直播/视频的节点处在相同频道中。 */
 @property (nonatomic, strong) ChannelId channelId;
+
+/** Pass a block to generate segment Id. 产生标识ts文件的字符串的block。*/
+@property (nonatomic, strong) SegmentId segmentId;
 
 /** The delegate of Player Stats. */
 @property (nonatomic, weak) id<CBP2pEngineDelegate> delegate;
