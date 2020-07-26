@@ -18,7 +18,7 @@
     CBP2pConfig *config = [CBP2pConfig defaultConfiguration];
     config.logLevel =  CBLogLevelDebug;
     config.tag = @"avplayer";
-    [[CBP2pEngine sharedInstance] startWithToken:@"free" andP2pConfig:config];
+    [[CBP2pEngine sharedInstance] startWithToken:@"ZMuO5qHZg" andP2pConfig:config];
 
     return YES;
 }
