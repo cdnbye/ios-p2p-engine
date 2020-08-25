@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
  Create a new instance with default configuration.
  实例化方法，用默认配置初始化。
  */
-- (instancetype)init;
+- (instancetype)init NS_UNAVAILABLE;
 
 
 @end
