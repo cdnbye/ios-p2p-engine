@@ -50,14 +50,14 @@ $ pod install
 ```
 
 ## 使用方法
-参照 [文档](https://www.cdnbye.com/views/ios/usage.html)
+参照 [文档](https://www.cdnbye.com/cn/views/ios/usage.html)
 
 ## 系统要求
 支持iOS 10.0以上系统。
 <br>注意：本SDK暂时不支持bitcode，在发布前请在xcode关闭bitcode。
 
 ## API文档
-参照 [API.md](https://www.cdnbye.com/views/ios/API.html)
+参照 [API.md](https://www.cdnbye.com/cn/views/ios/API.html)
 
 ## 反馈及意见
 
@@ -72,7 +72,7 @@ $ pod install
 - [hlsjs-p2p-engine](https://gitee.com/cdnbye/hlsjs-p2p-engine) - 目前最好的Web端P2P流媒体方案。
 
 ## FAQ
-我们收集了一些[常见问题](https://www.cdnbye.com/views/FAQ.html)。在报告issue之前请先查看一下。
+我们收集了一些[常见问题](https://www.cdnbye.com/cn/views/FAQ.html)。在报告issue之前请先查看一下。
 
 ## 联系我们
 邮箱：service@cdnbye.com
