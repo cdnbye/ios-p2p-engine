@@ -11,8 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NSString * _Nonnull (^ChannelId) (NSString * _Nonnull urlString);
-
 typedef NSString * _Nonnull (^SegmentId) (NSUInteger level, NSUInteger sn, NSString * _Nonnull urlString);
 
 extern NSString *kP2pEngineDidReceiveStatistics ;
@@ -41,10 +39,6 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
 
 /** Get the peer ID of p2p engine. 获取P2P Engine的peer ID */
 @property(nonatomic, copy, readonly) NSString *peerId;
-
-/** Some m3u8 urls play the same live/vod but have different paths on them. For example, example.com/clientId1/file.m3u8 and example.com/clientId2/file.m3u8. In this case, you can format a common channelId for them.
-    构造一个共同的chanelId，使实际观看同一直播/视频的节点处在相同频道中。 */
-@property (nonatomic, strong) ChannelId channelId;
 
 /** Pass a block to generate segment Id. 产生标识ts文件的字符串的block。*/
 @property (nonatomic, strong) SegmentId segmentId;
@@ -75,6 +69,15 @@ extern NSString *kP2pEngineDidReceiveStatistics ;
  @result A parsed local http url.
  */
 - (NSURL *)parseStreamURL:(NSURL *)url NS_SWIFT_NAME(parse(streamURL:));
+
+/**
+Get parsed local stream url by passing the original stream url(m3u8) to CBP2pEngine instance.
+
+@param url  The original stream url(m3u8).
+ @param videoId  video Id for the given url.
+@result A parsed local http url.
+*/
+- (NSURL *)parseStreamURL:(NSURL *)url withVideoId:(NSString *)videoId;
 
 /**
  Stop p2p and free used resources.
