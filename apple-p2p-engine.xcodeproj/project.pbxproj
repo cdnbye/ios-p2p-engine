@@ -3,20 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE21D5CE794C383EE695B23 /* Pods_apple_p2p_engine_iOS_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAC70228642689C42784B29 /* Pods_apple_p2p_engine_iOS_demo.framework */; };
+		3A8AF165192FB804E1919CB7 /* Pods_apple_p2p_engine_tvOS_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD56E0EF5F36EAC431AF2FDD /* Pods_apple_p2p_engine_tvOS_demo.framework */; };
+		734EC3A675C7FCD66A81D6D8 /* Pods_apple_p2p_engine_macOS_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866DFAAC73700B8CB04CF4F0 /* Pods_apple_p2p_engine_macOS_demo.framework */; };
 		944976AC2680DDD000B6D404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976AB2680DDD000B6D404 /* AppDelegate.swift */; };
 		944976AE2680DDD000B6D404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976AD2680DDD000B6D404 /* SceneDelegate.swift */; };
 		944976B02680DDD000B6D404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976AF2680DDD000B6D404 /* ViewController.swift */; };
 		944976B32680DDD000B6D404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944976B12680DDD000B6D404 /* Main.storyboard */; };
 		944976B52680DDD100B6D404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944976B42680DDD100B6D404 /* Assets.xcassets */; };
 		944976B82680DDD100B6D404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944976B62680DDD100B6D404 /* LaunchScreen.storyboard */; };
+		944976C62680E09300B6D404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976C52680E09300B6D404 /* AppDelegate.swift */; };
+		944976C82680E09300B6D404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976C72680E09300B6D404 /* ViewController.swift */; };
+		944976CB2680E09300B6D404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944976C92680E09300B6D404 /* Main.storyboard */; };
+		944976CD2680E09300B6D404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944976CC2680E09300B6D404 /* Assets.xcassets */; };
+		944976D02680E09300B6D404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944976CE2680E09300B6D404 /* LaunchScreen.storyboard */; };
+		944976DC2680E14600B6D404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976DB2680E14600B6D404 /* AppDelegate.swift */; };
+		944976DE2680E14600B6D404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944976DD2680E14600B6D404 /* ViewController.swift */; };
+		944976E02680E14800B6D404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944976DF2680E14800B6D404 /* Assets.xcassets */; };
+		944976E32680E14800B6D404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944976E12680E14800B6D404 /* Main.storyboard */; };
+		94A45B0E268F5B58000965C0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A45B0D268F5B58000965C0 /* VideoViewController.swift */; };
+		94A78AF326946A9E0093BCDF /* SwarmCloudSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A78AF226946A9E0093BCDF /* SwarmCloudSDK.xcframework */; };
+		94A78AF726946AD10093BCDF /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A78AF626946AD10093BCDF /* WebRTC.xcframework */; };
+		94A78AF826946AD10093BCDF /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A78AF626946AD10093BCDF /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		94A78AF926946AD10093BCDF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				94A78AF826946AD10093BCDF /* WebRTC.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		944976A82680DDD000B6D404 /* apple-p2p-engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-p2p-engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBA4291EEFC219A33B004F4 /* Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-tvOS_demo/Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		26FBC448899DAD5AD99143CF /* Pods-apple-p2p-engine-macOS_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-macOS_demo.debug.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-macOS_demo/Pods-apple-p2p-engine-macOS_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		35EF7993DD27838B65AF2362 /* Pods-apple-p2p-engine-iOS_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-iOS_demo.release.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-iOS_demo/Pods-apple-p2p-engine-iOS_demo.release.xcconfig"; sourceTree = "<group>"; };
+		441E85199A2BE6BB4E9DD1DD /* Pods-apple-p2p-engine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine.release.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine/Pods-apple-p2p-engine.release.xcconfig"; sourceTree = "<group>"; };
+		559B1E515D3866F5C1A56710 /* Pods-apple-p2p-engine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine.debug.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine/Pods-apple-p2p-engine.debug.xcconfig"; sourceTree = "<group>"; };
+		7B5D4DDFE20F5044C1D0E3A1 /* Pods-apple-p2p-engine-tvOS_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-tvOS_demo.release.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-tvOS_demo/Pods-apple-p2p-engine-tvOS_demo.release.xcconfig"; sourceTree = "<group>"; };
+		866DFAAC73700B8CB04CF4F0 /* Pods_apple_p2p_engine_macOS_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_p2p_engine_macOS_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		944976A82680DDD000B6D404 /* iOS_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		944976AB2680DDD000B6D404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		944976AD2680DDD000B6D404 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		944976AF2680DDD000B6D404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +61,27 @@
 		944976B42680DDD100B6D404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		944976B72680DDD100B6D404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944976B92680DDD100B6D404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944976C32680E09300B6D404 /* tvOS_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		944976C52680E09300B6D404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		944976C72680E09300B6D404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		944976CA2680E09300B6D404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		944976CC2680E09300B6D404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		944976CF2680E09300B6D404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		944976D12680E09300B6D404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944976D92680E14600B6D404 /* macOS_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		944976DB2680E14600B6D404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		944976DD2680E14600B6D404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		944976DF2680E14800B6D404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		944976E22680E14800B6D404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		944976E42680E14800B6D404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944976E52680E14800B6D404 /* macOS_demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_demo.entitlements; sourceTree = "<group>"; };
+		94A45B0D268F5B58000965C0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		94A78AF226946A9E0093BCDF /* SwarmCloudSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwarmCloudSDK.xcframework; path = ../../SwarmCloudSDK/Carthage/Build/SwarmCloudSDK.xcframework; sourceTree = "<group>"; };
+		94A78AF626946AD10093BCDF /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../WebRTCDatachannel/WebRTC.xcframework; sourceTree = "<group>"; };
+		9EAF3E24E4030FC7D3EA4DB1 /* Pods-apple-p2p-engine-iOS_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-iOS_demo.debug.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-iOS_demo/Pods-apple-p2p-engine-iOS_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		CCAC70228642689C42784B29 /* Pods_apple_p2p_engine_iOS_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_p2p_engine_iOS_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD56E0EF5F36EAC431AF2FDD /* Pods_apple_p2p_engine_tvOS_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_p2p_engine_tvOS_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED6AC82FF111C7131C9CA05F /* Pods-apple-p2p-engine-macOS_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-macOS_demo.release.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-macOS_demo/Pods-apple-p2p-engine-macOS_demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,29 +89,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE21D5CE794C383EE695B23 /* Pods_apple_p2p_engine_iOS_demo.framework in Frameworks */,
+				94A78AF326946A9E0093BCDF /* SwarmCloudSDK.xcframework in Frameworks */,
+				94A78AF726946AD10093BCDF /* WebRTC.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944976C02680E09300B6D404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8AF165192FB804E1919CB7 /* Pods_apple_p2p_engine_tvOS_demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944976D62680E14600B6D404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				734EC3A675C7FCD66A81D6D8 /* Pods_apple_p2p_engine_macOS_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077339D3C18CCBDB7FAB97E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				559B1E515D3866F5C1A56710 /* Pods-apple-p2p-engine.debug.xcconfig */,
+				441E85199A2BE6BB4E9DD1DD /* Pods-apple-p2p-engine.release.xcconfig */,
+				9EAF3E24E4030FC7D3EA4DB1 /* Pods-apple-p2p-engine-iOS_demo.debug.xcconfig */,
+				35EF7993DD27838B65AF2362 /* Pods-apple-p2p-engine-iOS_demo.release.xcconfig */,
+				26FBC448899DAD5AD99143CF /* Pods-apple-p2p-engine-macOS_demo.debug.xcconfig */,
+				ED6AC82FF111C7131C9CA05F /* Pods-apple-p2p-engine-macOS_demo.release.xcconfig */,
+				0CBA4291EEFC219A33B004F4 /* Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig */,
+				7B5D4DDFE20F5044C1D0E3A1 /* Pods-apple-p2p-engine-tvOS_demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4719366338F00ADFD0B8454C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94A78AF626946AD10093BCDF /* WebRTC.xcframework */,
+				94A78AF226946A9E0093BCDF /* SwarmCloudSDK.xcframework */,
+				CCAC70228642689C42784B29 /* Pods_apple_p2p_engine_iOS_demo.framework */,
+				866DFAAC73700B8CB04CF4F0 /* Pods_apple_p2p_engine_macOS_demo.framework */,
+				DD56E0EF5F36EAC431AF2FDD /* Pods_apple_p2p_engine_tvOS_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9449769F2680DDD000B6D404 = {
 			isa = PBXGroup;
 			children = (
-				944976AA2680DDD000B6D404 /* apple-p2p-engine */,
+				944976AA2680DDD000B6D404 /* iOS_demo */,
+				944976C42680E09300B6D404 /* tvOS_demo */,
+				944976DA2680E14600B6D404 /* macOS_demo */,
 				944976A92680DDD000B6D404 /* Products */,
+				077339D3C18CCBDB7FAB97E7 /* Pods */,
+				4719366338F00ADFD0B8454C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		944976A92680DDD000B6D404 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				944976A82680DDD000B6D404 /* apple-p2p-engine.app */,
+				944976A82680DDD000B6D404 /* iOS_demo.app */,
+				944976C32680E09300B6D404 /* tvOS_demo.app */,
+				944976D92680E14600B6D404 /* macOS_demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		944976AA2680DDD000B6D404 /* apple-p2p-engine */ = {
+		944976AA2680DDD000B6D404 /* iOS_demo */ = {
 			isa = PBXGroup;
 			children = (
 				944976AB2680DDD000B6D404 /* AppDelegate.swift */,
@@ -63,28 +173,96 @@
 				944976B42680DDD100B6D404 /* Assets.xcassets */,
 				944976B62680DDD100B6D404 /* LaunchScreen.storyboard */,
 				944976B92680DDD100B6D404 /* Info.plist */,
+				94A45B0D268F5B58000965C0 /* VideoViewController.swift */,
 			);
-			path = "apple-p2p-engine";
+			path = iOS_demo;
+			sourceTree = "<group>";
+		};
+		944976C42680E09300B6D404 /* tvOS_demo */ = {
+			isa = PBXGroup;
+			children = (
+				944976C52680E09300B6D404 /* AppDelegate.swift */,
+				944976C72680E09300B6D404 /* ViewController.swift */,
+				944976C92680E09300B6D404 /* Main.storyboard */,
+				944976CC2680E09300B6D404 /* Assets.xcassets */,
+				944976CE2680E09300B6D404 /* LaunchScreen.storyboard */,
+				944976D12680E09300B6D404 /* Info.plist */,
+			);
+			path = tvOS_demo;
+			sourceTree = "<group>";
+		};
+		944976DA2680E14600B6D404 /* macOS_demo */ = {
+			isa = PBXGroup;
+			children = (
+				944976DB2680E14600B6D404 /* AppDelegate.swift */,
+				944976DD2680E14600B6D404 /* ViewController.swift */,
+				944976DF2680E14800B6D404 /* Assets.xcassets */,
+				944976E12680E14800B6D404 /* Main.storyboard */,
+				944976E42680E14800B6D404 /* Info.plist */,
+				944976E52680E14800B6D404 /* macOS_demo.entitlements */,
+			);
+			path = macOS_demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		944976A72680DDD000B6D404 /* apple-p2p-engine */ = {
+		944976A72680DDD000B6D404 /* iOS_demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 944976BC2680DDD100B6D404 /* Build configuration list for PBXNativeTarget "apple-p2p-engine" */;
+			buildConfigurationList = 944976BC2680DDD100B6D404 /* Build configuration list for PBXNativeTarget "iOS_demo" */;
 			buildPhases = (
+				A2D00127D47BE6898DEAB6F3 /* [CP] Check Pods Manifest.lock */,
 				944976A42680DDD000B6D404 /* Sources */,
 				944976A52680DDD000B6D404 /* Frameworks */,
 				944976A62680DDD000B6D404 /* Resources */,
+				3FD9AA3E8924990B68FB2B99 /* [CP] Embed Pods Frameworks */,
+				94A78AF926946AD10093BCDF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "apple-p2p-engine";
+			name = iOS_demo;
 			productName = "apple-p2p-engine";
-			productReference = 944976A82680DDD000B6D404 /* apple-p2p-engine.app */;
+			productReference = 944976A82680DDD000B6D404 /* iOS_demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		944976C22680E09300B6D404 /* tvOS_demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 944976D22680E09300B6D404 /* Build configuration list for PBXNativeTarget "tvOS_demo" */;
+			buildPhases = (
+				16EC964C671915A61C4DEDE1 /* [CP] Check Pods Manifest.lock */,
+				944976BF2680E09300B6D404 /* Sources */,
+				944976C02680E09300B6D404 /* Frameworks */,
+				944976C12680E09300B6D404 /* Resources */,
+				224D4F47C871E7250A059F1A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tvOS_demo;
+			productName = tvOS_demo;
+			productReference = 944976C32680E09300B6D404 /* tvOS_demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		944976D82680E14600B6D404 /* macOS_demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 944976E62680E14800B6D404 /* Build configuration list for PBXNativeTarget "macOS_demo" */;
+			buildPhases = (
+				3E88C2F55B9EF090F016B349 /* [CP] Check Pods Manifest.lock */,
+				944976D52680E14600B6D404 /* Sources */,
+				944976D62680E14600B6D404 /* Frameworks */,
+				944976D72680E14600B6D404 /* Resources */,
+				093A3F40D9E11268E98B11F9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macOS_demo;
+			productName = macOS_demo;
+			productReference = 944976D92680E14600B6D404 /* macOS_demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,6 +275,12 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					944976A72680DDD000B6D404 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					944976C22680E09300B6D404 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					944976D82680E14600B6D404 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -114,7 +298,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				944976A72680DDD000B6D404 /* apple-p2p-engine */,
+				944976A72680DDD000B6D404 /* iOS_demo */,
+				944976C22680E09300B6D404 /* tvOS_demo */,
+				944976D82680E14600B6D404 /* macOS_demo */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +316,146 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		944976C12680E09300B6D404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944976D02680E09300B6D404 /* LaunchScreen.storyboard in Resources */,
+				944976CD2680E09300B6D404 /* Assets.xcassets in Resources */,
+				944976CB2680E09300B6D404 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944976D72680E14600B6D404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944976E02680E14800B6D404 /* Assets.xcassets in Resources */,
+				944976E32680E14800B6D404 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		093A3F40D9E11268E98B11F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-macOS_demo/Pods-apple-p2p-engine-macOS_demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-macOS_demo/Pods-apple-p2p-engine-macOS_demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-macOS_demo/Pods-apple-p2p-engine-macOS_demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16EC964C671915A61C4DEDE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apple-p2p-engine-tvOS_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		224D4F47C871E7250A059F1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-tvOS_demo/Pods-apple-p2p-engine-tvOS_demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-tvOS_demo/Pods-apple-p2p-engine-tvOS_demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-tvOS_demo/Pods-apple-p2p-engine-tvOS_demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E88C2F55B9EF090F016B349 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apple-p2p-engine-macOS_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FD9AA3E8924990B68FB2B99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-iOS_demo/Pods-apple-p2p-engine-iOS_demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-iOS_demo/Pods-apple-p2p-engine-iOS_demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-apple-p2p-engine-iOS_demo/Pods-apple-p2p-engine-iOS_demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D00127D47BE6898DEAB6F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apple-p2p-engine-iOS_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		944976A42680DDD000B6D404 /* Sources */ = {
@@ -140,6 +465,25 @@
 				944976B02680DDD000B6D404 /* ViewController.swift in Sources */,
 				944976AC2680DDD000B6D404 /* AppDelegate.swift in Sources */,
 				944976AE2680DDD000B6D404 /* SceneDelegate.swift in Sources */,
+				94A45B0E268F5B58000965C0 /* VideoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944976BF2680E09300B6D404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944976C82680E09300B6D404 /* ViewController.swift in Sources */,
+				944976C62680E09300B6D404 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944976D52680E14600B6D404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944976DE2680E14600B6D404 /* ViewController.swift in Sources */,
+				944976DC2680E14600B6D404 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +504,30 @@
 				944976B72680DDD100B6D404 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		944976C92680E09300B6D404 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				944976CA2680E09300B6D404 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		944976CE2680E09300B6D404 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				944976CF2680E09300B6D404 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		944976E12680E14800B6D404 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				944976E22680E14800B6D404 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,17 +651,18 @@
 		};
 		944976BD2680DDD100B6D404 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAF3E24E4030FC7D3EA4DB1 /* Pods-apple-p2p-engine-iOS_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FKPFDM8FHV;
-				INFOPLIST_FILE = "apple-p2p-engine/Info.plist";
+				INFOPLIST_FILE = iOS_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cdnbye.dev.apple-p2p-engine";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdnbye.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,20 +671,113 @@
 		};
 		944976BE2680DDD100B6D404 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35EF7993DD27838B65AF2362 /* Pods-apple-p2p-engine-iOS_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FKPFDM8FHV;
-				INFOPLIST_FILE = "apple-p2p-engine/Info.plist";
+				INFOPLIST_FILE = iOS_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cdnbye.dev.apple-p2p-engine";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdnbye.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		944976D32680E09300B6D404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CBA4291EEFC219A33B004F4 /* Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FKPFDM8FHV;
+				INFOPLIST_FILE = tvOS_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdnbye.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.5;
+			};
+			name = Debug;
+		};
+		944976D42680E09300B6D404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5D4DDFE20F5044C1D0E3A1 /* Pods-apple-p2p-engine-tvOS_demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FKPFDM8FHV;
+				INFOPLIST_FILE = tvOS_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdnbye.dev.t;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.5;
+			};
+			name = Release;
+		};
+		944976E72680E14800B6D404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26FBC448899DAD5AD99143CF /* Pods-apple-p2p-engine-macOS_demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS_demo/macOS_demo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FKPFDM8FHV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = macOS_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdnbye.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		944976E82680E14800B6D404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED6AC82FF111C7131C9CA05F /* Pods-apple-p2p-engine-macOS_demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS_demo/macOS_demo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FKPFDM8FHV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = macOS_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdnbye.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -331,11 +793,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		944976BC2680DDD100B6D404 /* Build configuration list for PBXNativeTarget "apple-p2p-engine" */ = {
+		944976BC2680DDD100B6D404 /* Build configuration list for PBXNativeTarget "iOS_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				944976BD2680DDD100B6D404 /* Debug */,
 				944976BE2680DDD100B6D404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		944976D22680E09300B6D404 /* Build configuration list for PBXNativeTarget "tvOS_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				944976D32680E09300B6D404 /* Debug */,
+				944976D42680E09300B6D404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		944976E62680E14800B6D404 /* Build configuration list for PBXNativeTarget "macOS_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				944976E72680E14800B6D404 /* Debug */,
+				944976E82680E14800B6D404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

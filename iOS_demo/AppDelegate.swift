@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import SwarmCloudSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let config = SWCP2pConfig.defaultConfiguration()
+        config.logLevel = .debug
+//        config.p2pEnabled = false
+        SWCP2pEngine.sharedInstance().start(token: "ZMuO5qHZg", p2pConfig: config)
+        
         return true
     }
 
