@@ -18,15 +18,6 @@ pod install
 - Copy the framework
 Unzip files, then drag and drop SwarmCloudSDK.xcframework and WebRTC.xcframework into your Xcode project on your application targets’ General settings tab, in the Frameworks, Libraries, and Embedded Content section.
 <img width="600" src="https://www.cdnbye.com/pics/xcode_framework.jpg" alt="xcode_framework">
-- Allow Arbitrary Loads
-In order to allow the loading of distributed content via the local proxy, enable loading data from HTTP in your app by opening your info.plist file as source code and adding the following values below the </dict> tag:
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
 
 ## Document
 See [document](https://www.hdtvcloud.com/en/views/ios/v2/usage.html)

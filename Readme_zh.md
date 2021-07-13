@@ -18,15 +18,6 @@ pod install
 - 拷贝 framework
 先解压这2个文件，然后将 SwarmCloudSDK.xcframework 和 WebRTC.xcframework 拖入 ***General*** -> ***Frameworks, Libraries, and Embedded Content***
 <img width="600" src="https://www.cdnbye.com/pics/xcode_framework.jpg" alt="xcode_framework">
-- 允许HTTP请求
-SDK通过本地代理服务器拦截数据请求的方式来进行P2P缓存和传输，所以需要在项目的info.plist中允许HTTP请求：
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
 
 ## 文档
 参考 [文档](https://www.cdnbye.com/cn/views/ios/v2/usage.html)
