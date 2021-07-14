@@ -13,7 +13,7 @@ This is a demo for CDNBye iOS SDK.
 pod install
 ```
 - Download pre-compiled XCFramework
-    - [SwarmCloudSDK.xcframework](https://github.com/swarm-cloud/apple-p2p-engine/releases/download/2.0.2/SwarmCloudSDK.xcframework.zip)
+    - [SwarmCloudSDK.xcframework](https://github.com/cdnbye/ios-p2p-engine/releases/download/v2.0.5/SwarmCloudSDK.xcframework.zip)
     - [WebRTC.xcframework](https://github.com/swarm-cloud/Apple-WebRTC/releases/download/v1.0/WebRTC.xcframework.zip)
 - Copy the framework
 Unzip files, then drag and drop SwarmCloudSDK.xcframework and WebRTC.xcframework into your Xcode project on your application targets’ General settings tab, in the Frameworks, Libraries, and Embedded Content section.

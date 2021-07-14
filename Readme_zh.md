@@ -13,7 +13,7 @@
 pod install
 ```
 - 下载预编译好的 XCFramework
-    - [SwarmCloudSDK.xcframework](https://github.com/swarm-cloud/apple-p2p-engine/releases/download/2.0.2/SwarmCloudSDK.xcframework.zip)
+    - [SwarmCloudSDK.xcframework](https://github.com/cdnbye/ios-p2p-engine/releases/download/v2.0.5/SwarmCloudSDK.xcframework.zip)
     - [WebRTC.xcframework](https://github.com/swarm-cloud/Apple-WebRTC/releases/download/v1.0/WebRTC.xcframework.zip)
 - 拷贝 framework
 先解压这2个文件，然后将 SwarmCloudSDK.xcframework 和 WebRTC.xcframework 拖入 ***General*** -> ***Frameworks, Libraries, and Embedded Content***
