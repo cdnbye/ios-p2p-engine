@@ -7,12 +7,11 @@
 
 import UIKit
 import SnapKit
-import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,9 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "normalCell")
         if (indexPath.row == 0) {
-            cell.textLabel?.text = "Video Stream P2P"
-        } else if (indexPath.row == 1) {
-            cell.textLabel?.text = "File Download P2P"
+            cell.textLabel?.text = "Video Stream P2P (HLS)"
         }
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.accessoryType = .disclosureIndicator
@@ -45,11 +42,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let destination = VideoViewController()
     //        destination.message = "传递的字符串"
             self.present(destination, animated: true, completion: nil)
-        } else if (indexPath.row == 1) {
-            let alertController = UIAlertController(title: "Notice", message: "Download P2P is not available now", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -83,10 +75,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             make.top.equalToSuperview().offset(200)
             make.height.equalTo(160)
         }
-        
-        // Do any additional setup after loading the view.
     }
-
-    
 }
 

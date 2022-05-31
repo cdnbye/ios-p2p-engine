@@ -19,8 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = SWCP2pConfig.defaultConfiguration()
         config.logLevel = .debug
 //        config.p2pEnabled = false
-        SWCP2pEngine.sharedInstance().start(token: "ZMuO5qHZg", p2pConfig: config)
-        
+        var error: NSError?
+        SWCP2pEngine.sharedInstance().start(token: "ZMuO5qHZg", p2pConfig: config, error: &error)
+        if (error != nil) {
+            print(error!)
+        }
         return true
     }
 

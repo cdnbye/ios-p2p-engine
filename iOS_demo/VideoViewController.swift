@@ -12,14 +12,12 @@ import AVFoundation
 import AVKit
 import SwarmCloudSDK
  
-class VideoViewController: UIViewController, SWCP2pEngineDelegate {
+class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDelegate {
     
     let HLS_LIVE_URL = "https://wowza.peer5.com/live/smil:bbb_abr.smil/chunklist_b591000.m3u8"
 //    let HLS_VOD_URL = "https://video.dious.cc/20200707/g5EIwDkS/1000kb/hls/index.m3u8"
 //    let HLS_VOD_URL = "https://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8"
     let HLS_VOD_URL = "https://video.cdnbye.com/0cf6732evodtransgzp1257070836/e0d4b12e5285890803440736872/v.f100220.m3u8"
-//    let MP4_URL_1 = "https://huya-w20.huya.com/2027/357649831/1300/e0a4cd303b58bab74f809be7f2d09113.mp4"
-//    let MP4_URL_2 = "https://scdn.common.00cdn.com/p2p/cloud-1080p.mp4"
     
     let SCREEN_WIDTH = UIScreen.main.bounds.size.width
     
@@ -40,8 +38,6 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
     
     var btnHlsVod: UIButton?
     var btnHlsLive: UIButton?
-    var btnMp4_2: UIButton?
-    var btnMp4_1: UIButton?
     
     
     override func viewDidLoad() {
@@ -93,13 +89,27 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         let width = SCREEN_WIDTH/2-30;
         let height = 40
         
+        let textField = UITextField()
+        statsView.addSubview(textField)
+        textField.borderStyle = UITextField.BorderStyle.roundedRect
+        textField.placeholder="input custom m3u8..."
+        textField.clearButtonMode = .whileEditing
+        textField.returnKeyType = UIReturnKeyType.done
+        textField.delegate = self
+        textField.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(10)
+            make.height.equalTo(height)
+            make.width.equalTo(SCREEN_WIDTH-50)
+        }
+        
         let labelOffload = UILabel()
         labelOffload.layer.borderColor = UIColor.green.cgColor
         statsView.addSubview(labelOffload)
         self.labelOffload = labelOffload
         labelOffload.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(height+20)
             make.height.equalTo(height)
             make.width.equalTo(width)
         }
@@ -110,7 +120,7 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.labelRatio = labelRatio
         labelRatio.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(SCREEN_WIDTH-width-30)
-            make.top.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(height+20)
             make.height.equalTo(height)
             make.width.equalTo(width)
         }
@@ -121,7 +131,7 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.labelUpload = labelUpload
         labelUpload.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(height+20)
+            make.top.equalToSuperview().offset(2*height+30)
             make.height.equalTo(height)
             make.width.equalTo(width)
         }
@@ -132,7 +142,7 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.labelP2pEnabled = labelP2pEnabled
         labelP2pEnabled.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(SCREEN_WIDTH-width-30)
-            make.top.equalToSuperview().offset(height+20)
+            make.top.equalToSuperview().offset(2*height+30)
             make.height.equalTo(height)
             make.width.equalTo(width)
         }
@@ -143,7 +153,7 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.labelPeers = labelPeers
         labelPeers.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(2*height+30)
+            make.top.equalToSuperview().offset(3*height+40)
             make.height.equalTo(height)
             make.width.equalTo(width)
         }
@@ -155,7 +165,7 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.labelVersion = labelVersion
         labelVersion.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(SCREEN_WIDTH-width-30)
-            make.top.equalToSuperview().offset(2*height+30)
+            make.top.equalToSuperview().offset(3*height+40)
             make.height.equalTo(height)
             make.width.equalTo(width)
         }
@@ -166,16 +176,19 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.labelPeerId = labelPeerId
         labelPeerId.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(3*height+40)
+            make.top.equalToSuperview().offset(4*height+50)
             make.height.equalTo(height)
             make.width.equalTo(SCREEN_WIDTH-50)
         }
         
         for label in statsView.subviews {
-            (label as! UILabel).textAlignment = .center
-            label.layer.masksToBounds = true;
-            label.layer.cornerRadius = 10;
-            label.layer.borderWidth = 2;
+            if ((label as? UILabel) != nil) {
+                (label as! UILabel).textAlignment = .center
+                label.layer.masksToBounds = true;
+                label.layer.cornerRadius = 10;
+                label.layer.borderWidth = 2;
+            }
+            
         }
         
         updateStatistics()
@@ -200,7 +213,7 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
         self.view.addSubview(btnView)
         btnView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(10)
-            make.top.equalToSuperview().offset(510)
+            make.top.equalToSuperview().offset(560)
             make.height.equalToSuperview().offset(100)
             make.width.equalToSuperview().offset(SCREEN_WIDTH)
         }
@@ -234,36 +247,11 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
             make.width.equalTo(width)
         }
         
-//        let btnMp4_1 = UIButton()
-//        btnMp4_1.backgroundColor = .cyan
-//        btnMp4_1.setTitle("MP4_1", for: .normal)
-//        btnMp4_1.addTarget(self, action: #selector(btnMp4_1Click(button:)), for: .touchUpInside)
-//        btnView.addSubview(btnMp4_1)
-//        self.btnMp4_1 = btnMp4_1
-//        btnMp4_1.snp.makeConstraints { make in
-//            make.left.equalToSuperview().offset(10)
-//            make.top.equalToSuperview().offset(height+10)
-//            make.height.equalTo(height)
-//            make.width.equalTo(width)
-//        }
-//
-//        let btnMp4_2 = UIButton()
-//        btnMp4_2.backgroundColor = .orange
-//        btnMp4_2.setTitle("MP4_2", for: .normal)
-//        btnMp4_2.addTarget(self, action: #selector(btnMp4_2Click(button:)), for: .touchUpInside)
-//        btnView.addSubview(btnMp4_2)
-//        self.btnMp4_2 = btnMp4_2
-//        btnMp4_2.snp.makeConstraints { make in
-//            make.left.equalToSuperview().offset(SCREEN_WIDTH-width-30)
-//            make.top.equalToSuperview().offset(height+10)
-//            make.height.equalTo(height)
-//            make.width.equalTo(width)
-//        }
-        
         for btn in btnView.subviews {
             btn.layer.masksToBounds = true;
             btn.layer.cornerRadius = 10;
         }
+        
     }
     
     @objc func btnHlsVodClick(button: UIButton) {
@@ -273,14 +261,6 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
     @objc func btnHlsLiveClick(button: UIButton) {
         startPlayWithUrl(url: URL(string: HLS_LIVE_URL)!)
     }
-    
-//    @objc func btnMp4_1Click(button: UIButton) {
-//        startPlayWithUrl(url: URL(string: MP4_URL_1)!)
-//    }
-//
-//    @objc func btnMp4_2Click(button: UIButton) {
-//        startPlayWithUrl(url: URL(string: MP4_URL_2)!)
-//    }
     
     func startPlayWithUrl(url: URL) {
         let proxyUrl = SWCP2pEngine.sharedInstance().parse(streamURL: url)
@@ -301,5 +281,13 @@ class VideoViewController: UIViewController, SWCP2pEngineDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         print("viewDidDisappear")
         SWCP2pEngine.sharedInstance().stopP2p()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if (textField.text != nil && textField.text?.isEmpty != true) {
+            startPlayWithUrl(url: URL(string: textField.text!)!)
+        }
+            return true
     }
 }
