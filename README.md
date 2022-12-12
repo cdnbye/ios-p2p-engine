@@ -1,6 +1,6 @@
 **English | [简体中文](Readme_zh.md)**
 
-<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://cdnbye.oss-cn-beijing.aliyuncs.com/pic/cdnbye.png" alt="cdnbye logo"></a></h1>
+<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://www.cdnbye.com/logo.png" alt="cdnbye logo"></a></h1>
 <h4 align="center">Let your viewers become your unlimitedly scalable CDN.</h4>
 
 ## About
@@ -18,6 +18,8 @@ pod install
 - Copy the framework
 Unzip files, then drag and drop SwarmCloudSDK.xcframework and WebRTC.xcframework into your Xcode project on your application targets’ General settings tab, in the Frameworks, Libraries, and Embedded Content section.
 <img width="600" src="https://www.cdnbye.com/pics/xcode_framework.jpg" alt="xcode_framework">
+- Use your own token and bundle Id
+Register your account in oms.cdnbye.com, where you can get token and register bundle Id. Then replace the token in demo with your own.
 
 ## Document
 See [document](https://www.hdtvcloud.com/en/views/ios/v2/usage.html)
