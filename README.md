@@ -12,14 +12,15 @@ This is a demo for CDNBye iOS SDK.
 ```bash
 pod install
 ```
+- Use your own token and bundle Id
+    - Register your account in oms.cdnbye.com, where you can get token and register bundle Id. Then replace the token in demo with your own.
 - Download pre-compiled XCFramework
     - [SwarmCloudSDK.xcframework](https://github.com/cdnbye/ios-p2p-engine/releases/download/v2.5.0/SwarmCloudSDK.xcframework.zip)
     - [WebRTC.xcframework](https://github.com/swarm-cloud/Apple-WebRTC/releases/download/v1.0/WebRTC.xcframework.zip)
 - Copy the framework
-Unzip files, then drag and drop SwarmCloudSDK.xcframework and WebRTC.xcframework into your Xcode project on your application targets’ General settings tab, in the Frameworks, Libraries, and Embedded Content section.
+    - Unzip files, then drag and drop SwarmCloudSDK.xcframework and WebRTC.xcframework into your Xcode project on your application targets’ General settings tab, in the Frameworks, Libraries, and Embedded Content section.
 <img width="600" src="https://www.cdnbye.com/pics/xcode_framework.jpg" alt="xcode_framework">
-- Use your own token and bundle Id
-Register your account in oms.cdnbye.com, where you can get token and register bundle Id. Then replace the token in demo with your own.
+
 
 ## Document
 See [document](https://www.hdtvcloud.com/en/views/ios/v2/usage.html)
