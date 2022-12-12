@@ -1,6 +1,6 @@
 **[English](README.md) | 简体中文**
 
-<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://cdnbye.oss-cn-beijing.aliyuncs.com/pic/cdnbye.png" alt="cdnbye logo"></a></h1>
+<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://www.cdnbye.com/logo.png" alt="cdnbye logo"></a></h1>
 <h4 align="center">Let your viewers become your unlimitedly scalable CDN.</h4>
 
 ## 关于
@@ -12,6 +12,8 @@
 ```bash
 pod install
 ```
+- 注册账号并获取token
+    - 在 oms.cdnbye.com 注册账号，并绑定 bundle Id，将获取的 token 替换 demo 中的 token 。
 - 下载预编译好的 XCFramework
     - [SwarmCloudSDK.xcframework](https://github.com/cdnbye/ios-p2p-engine/releases/download/v2.0.5/SwarmCloudSDK.xcframework.zip)
     - [WebRTC.xcframework](https://github.com/swarm-cloud/Apple-WebRTC/releases/download/v1.0/WebRTC.xcframework.zip)
