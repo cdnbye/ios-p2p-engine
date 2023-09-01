@@ -3,4 +3,4 @@
 /Pods
 Podfile.lock
 xcuserdata
-
+.DS_Store
