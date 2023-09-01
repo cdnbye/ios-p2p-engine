@@ -2,11 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 abstract_target "apple-p2p-engine" do
     # use_frameworks!
 
-    pod 'SocketRocket', '~> 0.6'
-    pod 'CocoaLumberjack'
-    pod "GCDWebServer", '~> 3.5'
-    pod 'CocoaAsyncSocket', '~> 7.6'
-    pod 'PINCache', '~> 3.0'
+    pod 'SwiftyJSON', '~> 5.0'
 
   target 'iOS_demo' do
     platform :ios, '10.0'

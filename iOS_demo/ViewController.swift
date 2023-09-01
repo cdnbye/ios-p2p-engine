@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "normalCell")
         if (indexPath.row == 0) {
-            cell.textLabel?.text = "Video Stream P2P (HLS)"
+            cell.textLabel?.text = "AVPlayer"
         }
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.accessoryType = .disclosureIndicator
@@ -40,7 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
         if (indexPath.row == 0) {
             let destination = VideoViewController()
-    //        destination.message = "传递的字符串"
             self.present(destination, animated: true, completion: nil)
         }
     }
@@ -59,14 +58,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.dataSource = self
         
         let label:UILabel = UILabel()
-        label.text = "1. Please run on real device\n\n2. Open same video on 2 devices to check p2p performance"
+        label.text = "1. Open same video on 2 devices to check p2p performance"
         label.textColor = .red
         label.textAlignment = .left
 
         label.lineBreakMode = .byWordWrapping
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
-        //设置文本高亮
         label.isHighlighted = true
         self.view.addSubview(label)
         label.snp.makeConstraints { make in

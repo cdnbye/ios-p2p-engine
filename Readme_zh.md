@@ -14,20 +14,17 @@ pod install
 ```
 - 注册账号并获取token
     - 在 oms.cdnbye.com 注册账号，并绑定 bundle Id，将获取的 token 替换 demo 中的 token 。
-- 下载预编译好的 XCFramework
-    - [SwarmCloudSDK.xcframework](https://github.com/cdnbye/ios-p2p-engine/releases/download/v2.0.5/SwarmCloudSDK.xcframework.zip)
-    - [WebRTC.xcframework](https://github.com/swarm-cloud/Apple-WebRTC/releases/download/v1.0/WebRTC.xcframework.zip)
+- 下载预编译好的 [XCFramework](https://github.com/cdnbye/ios-p2p-engine/releases)
 - 拷贝 framework
-先解压这2个文件，然后将 SwarmCloudSDK.xcframework 和 WebRTC.xcframework 拖入 ***General*** -> ***Frameworks, Libraries, and Embedded Content***
-<img width="600" src="https://www.cdnbye.com/pics/xcode_framework.jpg" alt="xcode_framework">
+先解压，然后将 SwarmCloudKit.xcframework 和 datachannel_wrapper.xcframework 拖入 ***General*** -> ***Frameworks, Libraries, and Embedded Content***
 
 ## 文档
 参考 [文档](https://www.cdnbye.com/cn/views/ios/v2/usage.html)
 
 ### 系统要求
-- iOS 10.0+
-- tvOS 10.2+
-- OSX 10.10+
+- iOS 13.0+
+- tvOS 13.2+
+- OSX 10.15+
 
 ## 反馈及意见
 当你遇到任何问题时，可以通过在 GitHub 的 repo 提交 issues 来反馈问题，请尽可能的描述清楚遇到的问题，如果有错误信息也一同附带，并且在 Labels 中指明类型为 bug 或者其他。

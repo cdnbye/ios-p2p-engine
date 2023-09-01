@@ -10,13 +10,11 @@ import UIKit
 import SnapKit
 import AVFoundation
 import AVKit
-import SwarmCloudSDK
+import SwarmCloudKit
  
-class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDelegate {
+class VideoViewController: UIViewController, UITextFieldDelegate {
     
-    let HLS_LIVE_URL = "https://wowza.peer5.com/live/smil:bbb_abr.smil/chunklist_b591000.m3u8"
-//    let HLS_VOD_URL = "https://video.dious.cc/20200707/g5EIwDkS/1000kb/hls/index.m3u8"
-//    let HLS_VOD_URL = "https://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8"
+    let HLS_LIVE_URL = "https://stream.swarmcloud.net:2096/hls/sintel/playlist.m3u8"
     let HLS_VOD_URL = "https://video.cdnbye.com/0cf6732evodtransgzp1257070836/e0d4b12e5285890803440736872/v.f100220.m3u8"
     
     let SCREEN_WIDTH = UIScreen.main.bounds.size.width
@@ -43,7 +41,8 @@ class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDe
     override func viewDidLoad() {
         super.viewDidLoad()
         playerVC = AVPlayerViewController()
-        SWCP2pEngine.sharedInstance().delegate = self
+        P2pEngine.shared.playerInteractor = self
+        P2pEngine.shared.hlsInterceptor = self
         self.view.addSubview(playerVC.view)
         playerVC.view.snp.makeConstraints { make in
             make.left.equalToSuperview()
@@ -51,28 +50,35 @@ class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDe
             make.height.equalTo(300)
             make.width.equalToSuperview()
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveMsg), name: Notification.Name(rawValue: kP2pEngineDidReceiveStatistics), object: nil)
+        
         showStatisticsView()
         showButtonView()
+        startMonitoring()
     }
     
-    @objc func didReceiveMsg(note:Notification) {
-        let dict = note.object as! Dictionary<String, Any>
-        print("didReceiveMsg \(dict)")
-        if ((dict["httpDownloaded"]) != nil) {
-            self.totalHttpDownloaded += dict["httpDownloaded"] as! Double/1024
-        } else if ((dict["p2pDownloaded"]) != nil) {
-            self.totalP2pDownloaded += dict["p2pDownloaded"] as! Double/1024
-        } else if ((dict["p2pUploaded"]) != nil) {
-            self.totalP2pUploaded += dict["p2pUploaded"] as! Double/1024
-        } else if ((dict["peers"]) != nil) {
-            self.peers = dict["peers"] as! Array<String>
-        } else if ((dict["serverConnected"]) != nil) {
-            self.serverConnected = dict["serverConnected"] as! Bool
-        }
-        DispatchQueue.main.async {
+    @objc func startMonitoring() {
+        let monitor = P2pStatisticsMonitor()
+        monitor.onPeers = { peers in
+            self.peers = peers
             self.updateStatistics()
         }
+        monitor.onP2pUploaded = { value in
+            self.totalP2pUploaded += Double(value)/1024
+            self.updateStatistics()
+        }
+        monitor.onP2pDownloaded = { value, speed in
+            self.totalP2pDownloaded += Double(value)/1024
+            self.updateStatistics()
+        }
+        monitor.onHttpDownloaded = { value in
+            self.totalHttpDownloaded += Double(value)/1024
+            self.updateStatistics()
+        }
+        monitor.onServerConnected = { connected in
+            self.serverConnected = connected
+            self.updateStatistics()
+        }
+        P2pEngine.shared.p2pStatisticsMonitor = monitor
     }
     
     func showStatisticsView() {
@@ -160,7 +166,7 @@ class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDe
         
         let labelVersion = UILabel()
         labelVersion.layer.borderColor = UIColor.brown.cgColor
-        labelVersion.text = "Version: \(SWCP2pEngine.engineVersion)"
+        labelVersion.text = "Version: \(P2pEngine.VERSION)"
         statsView.addSubview(labelVersion)
         self.labelVersion = labelVersion
         labelVersion.snp.makeConstraints { make in
@@ -203,7 +209,7 @@ class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDe
         self.labelUpload?.text = "Upload: \(String(format:"%.2f", self.totalP2pUploaded))MB"
         self.labelRatio?.text = "P2P Ratio: \(String(format:"%.0f", ratio*100))%"
         self.labelPeers?.text = "Peers: \(self.peers.count)"
-        self.labelPeerId?.text = "Peer ID: \(SWCP2pEngine.sharedInstance().peerId)"
+        self.labelPeerId?.text = "Peer ID: \(P2pEngine.shared.peerId)"
         self.labelP2pEnabled?.text = "Connected: \(self.serverConnected ? "Yes" : "No")"
     }
     
@@ -255,17 +261,18 @@ class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDe
     }
     
     @objc func btnHlsVodClick(button: UIButton) {
-        startPlayWithUrl(url: URL(string: HLS_VOD_URL)!)
+        startPlayWithUrl(url: HLS_VOD_URL)
     }
     
     @objc func btnHlsLiveClick(button: UIButton) {
-        startPlayWithUrl(url: URL(string: HLS_LIVE_URL)!)
+        startPlayWithUrl(url: HLS_LIVE_URL)
     }
     
-    func startPlayWithUrl(url: URL) {
-        let proxyUrl = SWCP2pEngine.sharedInstance().parse(streamURL: url)
+    func startPlayWithUrl(url: String) {
+        let proxyUrl = P2pEngine.shared.parseStreamUrl(url)
+        self.playerVC.player?.pause()
         self.playerVC.player = nil
-        self.playerVC.player = AVPlayer(url: proxyUrl)
+        self.playerVC.player = AVPlayer(url: URL(string: proxyUrl)!)
         self.playerVC.player?.play()
         
         clearData()
@@ -280,14 +287,57 @@ class VideoViewController: UIViewController, UITextFieldDelegate, SWCP2pEngineDe
     
     override func viewDidDisappear(_ animated: Bool) {
         print("viewDidDisappear")
-        SWCP2pEngine.sharedInstance().stopP2p()
+        self.playerVC.player?.pause()
+        self.playerVC.player = nil
+        P2pEngine.shared.stopP2p()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if (textField.text != nil && textField.text?.isEmpty != true) {
-            startPlayWithUrl(url: URL(string: textField.text!)!)
+            startPlayWithUrl(url: textField.text!)
         }
             return true
     }
+
+}
+
+extension VideoViewController: PlayerInteractor {
+    
+    func onCurrentPosition() -> TimeInterval {
+        return CMTimeGetSeconds(self.playerVC.player!.currentTime())
+    }
+    
+    func onBufferedDuration() -> TimeInterval {
+        let currentTime = CMTimeGetSeconds(self.playerVC.player!.currentTime())
+        var bufferedDuration: Double = 0.0
+        let timeRanges = self.playerVC.player!.currentItem!.loadedTimeRanges
+        for value in timeRanges {
+            let timeRange = value.timeRangeValue
+            let start = CMTimeGetSeconds(timeRange.start)
+            let end = start + CMTimeGetSeconds(timeRange.duration);
+            if (currentTime >= start && currentTime <= end) {
+                bufferedDuration = end - currentTime;
+                break;
+            }
+        }
+        return bufferedDuration;
+    }
+    
+}
+
+extension VideoViewController: HlsInterceptor {
+    
+    func shouldBypassSegment(url: String) -> Bool {
+        return false
+    }
+    
+    func interceptPlaylist(data: Data, url: String) -> Data {
+        return data
+    }
+    
+    func isMediaSegment(url: String) -> Bool {
+        return false
+    }
+    
 }
