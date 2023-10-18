@@ -14,9 +14,6 @@ pod install
 ```
 - Use your own token and bundle Id
     - Register your account in oms.cdnbye.com, where you can get token and register bundle Id. Then replace the token in demo with your own.
-- Download pre-compiled [XCFramework](https://github.com/cdnbye/ios-p2p-engine/releases)
-- Copy the framework
-    - Unzip files, then drag and drop SwarmCloudSDK.xcframework and datachannel_wrapper.xcframework into your Xcode project on your application targets’ General settings tab, in the Frameworks, Libraries, and Embedded Content section.
 
 ## Document
 See [document](https://www.hdtvcloud.com/en/views/ios/v2/usage.html)

@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 abstract_target "apple-p2p-engine" do
     # use_frameworks!
 
-    pod 'SwiftyJSON', '~> 5.0'
+    pod 'P2pEngine-iOS'
 
   target 'iOS_demo' do
     platform :ios, '10.0'

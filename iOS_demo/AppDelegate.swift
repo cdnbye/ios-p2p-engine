@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             debug: true,
             logLevel: .DEBUG
         )
+//        config.playlistTimeOffset = 0.0
         P2pEngine.setup(token: "ZMuO5qHZg", config: config)   // replace with your own token
         
         return true

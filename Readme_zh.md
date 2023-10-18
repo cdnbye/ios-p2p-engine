@@ -14,9 +14,6 @@ pod install
 ```
 - 注册账号并获取token
     - 在 oms.cdnbye.com 注册账号，并绑定 bundle Id，将获取的 token 替换 demo 中的 token 。
-- 下载预编译好的 [XCFramework](https://github.com/cdnbye/ios-p2p-engine/releases)
-- 拷贝 framework
-先解压，然后将 SwarmCloudKit.xcframework 和 datachannel_wrapper.xcframework 拖入 ***General*** -> ***Frameworks, Libraries, and Embedded Content***
 
 ## 文档
 参考 [文档](https://www.cdnbye.com/cn/views/ios/v2/usage.html)
