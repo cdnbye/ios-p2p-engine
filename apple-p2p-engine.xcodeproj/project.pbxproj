@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,26 +26,7 @@
 		944976E02680E14800B6D404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944976DF2680E14800B6D404 /* Assets.xcassets */; };
 		944976E32680E14800B6D404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944976E12680E14800B6D404 /* Main.storyboard */; };
 		94A45B0E268F5B58000965C0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A45B0D268F5B58000965C0 /* VideoViewController.swift */; };
-		A5D6EB832AA0F95300FC2AA2 /* datachannel_wrapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6EB822AA0F95300FC2AA2 /* datachannel_wrapper.xcframework */; };
-		A5D6EB842AA0F95300FC2AA2 /* datachannel_wrapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6EB822AA0F95300FC2AA2 /* datachannel_wrapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A5D6EB8A2AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6EB892AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework */; };
-		A5D6EB8B2AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6EB892AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A5D6EB852AA0F95300FC2AA2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A5D6EB842AA0F95300FC2AA2 /* datachannel_wrapper.xcframework in Embed Frameworks */,
-				A5D6EB8B2AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0CBA4291EEFC219A33B004F4 /* Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-tvOS_demo/Pods-apple-p2p-engine-tvOS_demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,12 +59,9 @@
 		944976E42680E14800B6D404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944976E52680E14800B6D404 /* macOS_demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_demo.entitlements; sourceTree = "<group>"; };
 		94A45B0D268F5B58000965C0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		94A78AF226946A9E0093BCDF /* SwarmCloudSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwarmCloudSDK.xcframework; path = ../../SwarmCloudSDK/Carthage/Build/SwarmCloudSDK.xcframework; sourceTree = "<group>"; };
-		94A78AF626946AD10093BCDF /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../WebRTCDatachannel/WebRTC.xcframework; sourceTree = "<group>"; };
 		9EAF3E24E4030FC7D3EA4DB1 /* Pods-apple-p2p-engine-iOS_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-iOS_demo.debug.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-iOS_demo/Pods-apple-p2p-engine-iOS_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A5D6EB822AA0F95300FC2AA2 /* datachannel_wrapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = datachannel_wrapper.xcframework; path = ../libDC/1.0.8/datachannel_wrapper.xcframework; sourceTree = "<group>"; };
 		A5D6EB862AA0F96400FC2AA2 /* SwarmCloudKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwarmCloudKit.xcframework; path = ../SwarmCloudKit/archives/SwarmCloudKit.xcframework; sourceTree = "<group>"; };
-		A5D6EB892AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "SwarmCloudKit-iOS.xcframework"; path = "../SwarmCloudKit/archives/SwarmCloudKit-iOS.xcframework"; sourceTree = "<group>"; };
 		CCAC70228642689C42784B29 /* Pods_apple_p2p_engine_iOS_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_p2p_engine_iOS_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD56E0EF5F36EAC431AF2FDD /* Pods_apple_p2p_engine_tvOS_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_p2p_engine_tvOS_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6AC82FF111C7131C9CA05F /* Pods-apple-p2p-engine-macOS_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple-p2p-engine-macOS_demo.release.xcconfig"; path = "Target Support Files/Pods-apple-p2p-engine-macOS_demo/Pods-apple-p2p-engine-macOS_demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EE21D5CE794C383EE695B23 /* Pods_apple_p2p_engine_iOS_demo.framework in Frameworks */,
-				A5D6EB8A2AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework in Frameworks */,
-				A5D6EB832AA0F95300FC2AA2 /* datachannel_wrapper.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,11 +113,8 @@
 		4719366338F00ADFD0B8454C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A5D6EB892AA103BE00FC2AA2 /* SwarmCloudKit-iOS.xcframework */,
 				A5D6EB862AA0F96400FC2AA2 /* SwarmCloudKit.xcframework */,
 				A5D6EB822AA0F95300FC2AA2 /* datachannel_wrapper.xcframework */,
-				94A78AF626946AD10093BCDF /* WebRTC.xcframework */,
-				94A78AF226946A9E0093BCDF /* SwarmCloudSDK.xcframework */,
 				CCAC70228642689C42784B29 /* Pods_apple_p2p_engine_iOS_demo.framework */,
 				866DFAAC73700B8CB04CF4F0 /* Pods_apple_p2p_engine_macOS_demo.framework */,
 				DD56E0EF5F36EAC431AF2FDD /* Pods_apple_p2p_engine_tvOS_demo.framework */,
@@ -224,7 +197,6 @@
 				944976A52680DDD000B6D404 /* Frameworks */,
 				944976A62680DDD000B6D404 /* Resources */,
 				3FD9AA3E8924990B68FB2B99 /* [CP] Embed Pods Frameworks */,
-				A5D6EB852AA0F95300FC2AA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
