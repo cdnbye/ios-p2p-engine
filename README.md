@@ -16,7 +16,7 @@ pod install
     - Register your account in oms.cdnbye.com, where you can get token and register bundle Id. Then replace the token in demo with your own.
 
 ## Document
-See [document](https://www.hdtvcloud.com/en/views/ios/v2/usage.html)
+See [document](https://docs.swarmcloud.net/ios)
 
 ## Requirements
 - iOS 13.0+
@@ -33,7 +33,7 @@ See [document](https://www.hdtvcloud.com/en/views/ios/v2/usage.html)
 - [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine) - Web Video Delivery Technology with No Plugins.
 
 ## FAQ
-We have collected some [frequently asked questions](https://www.hdtvcloud.com/en/views/FAQ.html). Before reporting an issue, please search if the FAQ has the answer to your problem.
+We have collected some [frequently asked questions](https://docs.swarmcloud.net/faq). Before reporting an issue, please search if the FAQ has the answer to your problem.
 
 ## Contact Us
 Email：service@cdnbye.com
