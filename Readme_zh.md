@@ -16,7 +16,7 @@ pod install
     - 在 oms.cdnbye.com 注册账号，并绑定 bundle Id，将获取的 token 替换 demo 中的 token 。
 
 ## 文档
-参考 [文档](https://www.cdnbye.com/cn/views/ios/v2/usage.html)
+参考 [文档](https://www.cdnbye.com/cn/ios/usage.html)
 
 ### 系统要求
 - iOS 13.0+
@@ -32,7 +32,7 @@ pod install
 - [hlsjs-p2p-engine](https://gitee.com/cdnbye/hlsjs-p2p-engine) - 目前最好的Web端P2P流媒体方案。
 
 ## FAQ
-我们收集了一些[常见问题](https://www.cdnbye.com/cn/views/FAQ.html)。在报告issue之前请先查看一下。
+我们收集了一些[常见问题](https://www.cdnbye.com/faq.html)。在报告issue之前请先查看一下。
 
 ## 联系我们
 邮箱：service@cdnbye.com
