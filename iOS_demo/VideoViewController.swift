@@ -14,8 +14,8 @@ import SwarmCloudKit
  
 class VideoViewController: UIViewController, UITextFieldDelegate {
     
-    let HLS_LIVE_URL = "https://stream.swarmcloud.net:2096/hls/sintel/playlist.m3u8"
-    let HLS_VOD_URL = "https://video.cdnbye.com/0cf6732evodtransgzp1257070836/e0d4b12e5285890803440736872/v.f100220.m3u8"
+    let HLS_LIVE_URL = "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/level_0.m3u8"
+    let HLS_VOD_URL = "https://storage.googleapis.com/wvtemp/rkuroiwa/hls_single_segment/sintel_1080p_single_segment.m3u8"
     
     let SCREEN_WIDTH = UIScreen.main.bounds.size.width
     
@@ -41,6 +41,7 @@ class VideoViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         playerVC = AVPlayerViewController()
+        playerVC.player = AVPlayer()
         P2pEngine.shared.playerInteractor = self
         P2pEngine.shared.hlsInterceptor = self
         self.view.addSubview(playerVC.view)
@@ -272,10 +273,10 @@ class VideoViewController: UIViewController, UITextFieldDelegate {
     
     func startPlayWithUrl(url: String) {
         let proxyUrl = P2pEngine.shared.parseStreamUrl(url)
-        self.playerVC.player?.pause()
-        self.playerVC.player = nil
-        self.playerVC.player = AVPlayer(url: URL(string: proxyUrl)!)
-        self.playerVC.player?.play()
+        let item = AVPlayerItem(asset: AVURLAsset(url: URL(string: proxyUrl)!))
+        let player = self.playerVC.player!
+        player.replaceCurrentItem(with: item)
+        player.play()
         
         clearData()
         updateStatistics()

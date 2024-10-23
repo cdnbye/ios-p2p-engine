@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 abstract_target "apple-p2p-engine" do
     # use_frameworks!
 
-    pod 'P2pEngine-iOS'
+    pod 'SwarmCloudKit', '= 3.2.5'
 
   target 'iOS_demo' do
     platform :ios, '13.0'
@@ -23,6 +23,6 @@ abstract_target "apple-p2p-engine" do
   end
 end
 
-  
+
 
 
