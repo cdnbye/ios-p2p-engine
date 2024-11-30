@@ -9,6 +9,13 @@ import SwiftUI
 
 @main
 struct swiftui_demoApp: App {
+    
+#if canImport(UIKit)
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+#elseif canImport(AppKit)
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+#endif
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

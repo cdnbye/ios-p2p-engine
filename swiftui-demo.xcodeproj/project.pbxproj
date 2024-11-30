@@ -11,6 +11,8 @@
 		A56AB1402CF71F9900E5C04C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AB13F2CF71F9900E5C04C /* ContentView.swift */; };
 		A56AB1422CF71F9B00E5C04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56AB1412CF71F9B00E5C04C /* Assets.xcassets */; };
 		A56AB1462CF71F9B00E5C04C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56AB1452CF71F9B00E5C04C /* Preview Assets.xcassets */; };
+		A56AB14E2CF720AD00E5C04C /* SwarmCloudKit in Frameworks */ = {isa = PBXBuildFile; productRef = A56AB14D2CF720AD00E5C04C /* SwarmCloudKit */; };
+		A56AB1522CF72AC200E5C04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AB1512CF72AC200E5C04C /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		A56AB1412CF71F9B00E5C04C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A56AB1432CF71F9B00E5C04C /* swiftui_demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftui_demo.entitlements; sourceTree = "<group>"; };
 		A56AB1452CF71F9B00E5C04C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A56AB1512CF72AC200E5C04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56AB14E2CF720AD00E5C04C /* SwarmCloudKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 				A56AB1412CF71F9B00E5C04C /* Assets.xcassets */,
 				A56AB1432CF71F9B00E5C04C /* swiftui_demo.entitlements */,
 				A56AB1442CF71F9B00E5C04C /* Preview Content */,
+				A56AB1512CF72AC200E5C04C /* AppDelegate.swift */,
 			);
 			path = "swiftui-demo";
 			sourceTree = "<group>";
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = "swiftui-demo";
+			packageProductDependencies = (
+				A56AB14D2CF720AD00E5C04C /* SwarmCloudKit */,
+			);
 			productName = "swiftui-demo";
 			productReference = A56AB13A2CF71F9900E5C04C /* swiftui-demo.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = A56AB1312CF71F9900E5C04C;
+			packageReferences = (
+				A56AB14C2CF720AD00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */,
+			);
 			productRefGroup = A56AB13B2CF71F9900E5C04C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56AB1522CF72AC200E5C04C /* AppDelegate.swift in Sources */,
 				A56AB1402CF71F9900E5C04C /* ContentView.swift in Sources */,
 				A56AB13E2CF71F9900E5C04C /* swiftui_demoApp.swift in Sources */,
 			);
@@ -284,18 +296,20 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cdnbye.swiftui-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
 			};
 			name = Debug;
 		};
@@ -322,18 +336,20 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cdnbye.swiftui-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
 			};
 			name = Release;
 		};
@@ -359,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A56AB14C2CF720AD00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swarm-cloud/SwarmCloudKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A56AB14D2CF720AD00E5C04C /* SwarmCloudKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A56AB14C2CF720AD00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */;
+			productName = SwarmCloudKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A56AB1322CF71F9900E5C04C /* Project object */;
 }
