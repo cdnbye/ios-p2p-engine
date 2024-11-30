@@ -1,7 +1,12 @@
 **English | [简体中文](Readme_zh.md)**
 
-<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://www.cdnbye.com/logo.png" alt="cdnbye logo"></a></h1>
+<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://www.swarmcloud.net/img/logo.png" alt="cdnbye logo"></a></h1>
 <h4 align="center">Let your viewers become your unlimitedly scalable CDN.</h4>
+
+![Platform](https://img.shields.io/badge/Platform-iOS%20&%20OSX%20&%20tvOS-4BC51D.svg?style=flat)
+![Swift](https://img.shields.io/badge/Swift-5.0-4BC51D.svg?style=flat)
+[![CocoaPods](https://img.shields.io/cocoapods/v/SwarmCloudKit.svg?style=flat)](https://cocoapods.org/pods/SwarmCloudKit)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## About
 This is a demo for SwarmCloud iOS SDK.
