@@ -56,6 +56,7 @@ struct ContentView: View {
         viewModel.player.pause()
         clear()
         viewModel.urlString = urlStr
+        startMonitoring()
     }
     
     private func clear() {
@@ -75,11 +76,11 @@ struct ContentView: View {
                     .onDisappear {
                         viewModel.player.pause()
                     }
-                #if os(iOS)
+#if os(iOS) || os(tvOS)
                     .frame(width: UIScreen.main.bounds.width, height: 200)
-                #elseif os(macOS)
+#else
                     .frame(width: NSScreen.main?.frame.width ?? 0, height: 200)
-                #endif
+#endif
                 
                 TextField(
                   "input custom m3u8..",
@@ -92,7 +93,11 @@ struct ContentView: View {
                     .shadow(color: .gray.opacity(0.3), radius: 5).overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 1)
-                    ).textFieldStyle(.roundedBorder).lineLimit(2)
+                    )
+#if os(iOS) || os(OSX)
+                    .textFieldStyle(.roundedBorder)
+#endif
+                    .lineLimit(2)
                 
                 HStack {
                     Text("Offload: \(String(format:"%.2f", offload))MB")
@@ -132,13 +137,15 @@ struct ContentView: View {
                 }.padding()
             }
             
-        }.onAppear {
-            startMonitoring()
         }
         
     }
     
     func startMonitoring() {
+        if P2pEngine.shared.p2pStatisticsMonitor != nil {
+            return
+        }
+        print("startMonitoring")
         let monitor = P2pStatisticsMonitor(queue: .main)
         monitor.onPeers = { peers in
             self.peers = peers.count
@@ -177,7 +184,10 @@ extension View {
     
     func buttonStyle() -> some View {
         padding().buttonStyle(.borderedProminent)
-            .buttonBorderShape(.capsule).controlSize(.large)
+            .buttonBorderShape(.capsule)
+#if os(iOS) || os(OSX)
+            .controlSize(.large)
+#endif
     }
     
 }

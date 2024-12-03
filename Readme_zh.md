@@ -1,6 +1,6 @@
 **[English](README.md) | 简体中文**
 
-<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://www.swarmcloud.net/img/logo.png" alt="cdnbye logo"></a></h1>
+<h1 align="center"><a href="" target="_blank" rel="noopener noreferrer"><img width="250" src="https://www.swarmcloud.net/img/logo.png" alt="swarmcloud logo"></a></h1>
 <h4 align="center">Let your viewers become your unlimitedly scalable CDN.</h4>
 
 ![Platform](https://img.shields.io/badge/Platform-iOS%20&%20OSX%20&%20tvOS-4BC51D.svg?style=flat)
@@ -9,7 +9,7 @@
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## 关于
-本项目是 CDNBye iOS SDK 的演示demo。
+本项目是 SwarmCloud iOS SDK 的演示demo。
 
 ## 使用方法
 - 将本项目克隆到本地

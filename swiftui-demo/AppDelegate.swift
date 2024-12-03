@@ -12,15 +12,9 @@ func initP2pEngine() {
     let config = P2pConfig(
         trackerZone: .China,
 //        p2pEnabled: false,
-            p2pEnabled: true,
+        p2pEnabled: true,
         debug: true,
         logLevel: .DEBUG
-//            logPersistent: true,
-//            hlsMediaFiles: ["$a", "ts"],
-//            fastStartup: true,
-//            signalConfig: SignalConfig(mainAddr: "ws://signal.swarmcloud.net", backupAddr: "wss://signal.cdnbye.com")
-//            insertTagWithTimeOffset: 0.0,
-//            diskCacheLimit: 10 * 1024 * 1024
     )
     P2pEngine.setup(token: "ZMuO5qHZg", config: config)
 }

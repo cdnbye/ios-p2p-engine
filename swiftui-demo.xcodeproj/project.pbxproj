@@ -11,8 +11,8 @@
 		A56AB1402CF71F9900E5C04C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AB13F2CF71F9900E5C04C /* ContentView.swift */; };
 		A56AB1422CF71F9B00E5C04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56AB1412CF71F9B00E5C04C /* Assets.xcassets */; };
 		A56AB1462CF71F9B00E5C04C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56AB1452CF71F9B00E5C04C /* Preview Assets.xcassets */; };
-		A56AB14E2CF720AD00E5C04C /* SwarmCloudKit in Frameworks */ = {isa = PBXBuildFile; productRef = A56AB14D2CF720AD00E5C04C /* SwarmCloudKit */; };
 		A56AB1522CF72AC200E5C04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AB1512CF72AC200E5C04C /* AppDelegate.swift */; };
+		A56AB1602CFDE6BF00E5C04C /* SwarmCloudKit in Frameworks */ = {isa = PBXBuildFile; productRef = A56AB15F2CFDE6BF00E5C04C /* SwarmCloudKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A56AB14E2CF720AD00E5C04C /* SwarmCloudKit in Frameworks */,
+				A56AB1602CFDE6BF00E5C04C /* SwarmCloudKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			);
 			name = "swiftui-demo";
 			packageProductDependencies = (
-				A56AB14D2CF720AD00E5C04C /* SwarmCloudKit */,
+				A56AB15F2CFDE6BF00E5C04C /* SwarmCloudKit */,
 			);
 			productName = "swiftui-demo";
 			productReference = A56AB13A2CF71F9900E5C04C /* swiftui-demo.app */;
@@ -122,7 +122,7 @@
 			);
 			mainGroup = A56AB1312CF71F9900E5C04C;
 			packageReferences = (
-				A56AB14C2CF720AD00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */,
+				A56AB15E2CFDE6BF00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */,
 			);
 			productRefGroup = A56AB13B2CF71F9900E5C04C /* Products */;
 			projectDirPath = "";
@@ -377,7 +377,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A56AB14C2CF720AD00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */ = {
+		A56AB15E2CFDE6BF00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swarm-cloud/SwarmCloudKit";
 			requirement = {
@@ -388,9 +388,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A56AB14D2CF720AD00E5C04C /* SwarmCloudKit */ = {
+		A56AB15F2CFDE6BF00E5C04C /* SwarmCloudKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A56AB14C2CF720AD00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */;
+			package = A56AB15E2CFDE6BF00E5C04C /* XCRemoteSwiftPackageReference "SwarmCloudKit" */;
 			productName = SwarmCloudKit;
 		};
 /* End XCSwiftPackageProductDependency section */
