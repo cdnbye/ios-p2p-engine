@@ -17,7 +17,7 @@
     - 在 [dashboard](https://dash.swarmcloud.net) 注册账号，并绑定 bundle Id，将获取的 token 替换 demo 中的 token 。
 
 ## 文档
-参考 [文档](https://www.cdnbye.com/cn/ios/usage.html)
+参考 [文档](https://www.cdnbye.com/ios/usage.html)
 
 ### 系统要求
 - iOS 13.0+
