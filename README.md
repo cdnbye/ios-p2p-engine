@@ -14,10 +14,10 @@ This is a demo for SwarmCloud iOS SDK.
 ## Usage
 - Clone the project
 - Use your own token and bundle Id
-    - Register your account in [dashboard](https://dash.swarmcloud.net), where you can get token and register bundle Id. Then replace the token in demo with your own.
+    - Register your account in [dashboard](https://dash.swarmcloud.net?source=github), where you can get token and register bundle Id. Then replace the token in demo with your own.
 
 ## Document
-See [document](https://swarmcloud.net/ios)
+See [document](https://swarmcloud.net/ios?utm_source=github)
 
 ## Requirements
 - iOS 13.0+
